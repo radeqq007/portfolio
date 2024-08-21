@@ -26,12 +26,15 @@
     description="I created this portfiolio with vue.js - a framework that I was learning for past few months."
     link="https://github.com/radeqq007/image-to-ascii"
   />
+
+  <SocialLinks />
 </template>
 
 <script setup>
 import About from './components/About.vue';
 import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
+import SocialLinks from './components/SocialLinks.vue';
 import Works from './components/Works.vue';
 </script>
 
