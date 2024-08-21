@@ -85,7 +85,7 @@ p {
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 1.55rem;
   }
 }
 </style>
