@@ -47,6 +47,7 @@ import Works from './components/Works.vue';
   overflow: hidden;
   padding: 4rem;
   z-index: 2; /* idk why this works but without this blobs aren't visible */
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .line {
@@ -75,5 +76,16 @@ p {
   color: var(--secondary-color);
   font-family: 'Karla';
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .line {
+    top: 60vh;
+    left: 1rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
 }
 </style>

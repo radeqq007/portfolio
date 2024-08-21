@@ -37,4 +37,14 @@ a:hover {
 a:hover::before {
   width: 100%;
 }
+
+@media only screen and (max-width: 650px) {
+  a {
+    background-color: var(--bg-color);
+    padding: 0.4rem 1rem;
+    width: 90%;
+    text-align: center;
+    border-radius: 0.4rem;
+  }
+}
 </style>

@@ -58,4 +58,24 @@ img {
 img:hover {
   scale: 1.02;
 }
+
+@media only screen and (max-width: 650px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  img {
+    width: 90vw;
+    height: 20vh;
+    margin-left: 1.3rem; /* I have to do this because of the line */
+  }
+  h3,
+  p {
+    width: 80vw;
+  }
+}
 </style>

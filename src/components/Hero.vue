@@ -45,4 +45,29 @@ p {
   right: 8rem;
   bottom: -20rem;
 }
+
+@media only screen and (max-width: 650px) {
+  .hero {
+    padding-left: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+
+  .blob:nth-of-type(1) {
+    bottom: -2rem;
+  }
+  .blob:nth-of-type(2) {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+    grid-column-start: 1;
+  }
+
+  p {
+    font-size: 2rem;
+    grid-column-start: 1;
+  }
+}
 </style>

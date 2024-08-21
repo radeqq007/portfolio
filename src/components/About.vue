@@ -44,4 +44,20 @@ img {
   right: -10rem;
   bottom: -20rem;
 }
+
+@media only screen and (max-width: 650px) {
+  img {
+    display: none;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blob {
+    bottom: 2rem;
+    right: -35rem;
+  }
+}
 </style>
