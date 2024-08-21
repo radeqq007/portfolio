@@ -7,21 +7,21 @@
   <Works
     title
     layout="left"
-    img="src\assets\go-todo-list.png"
+    img="..\assets\go-todo-list.png"
     name="GO TODO LIST"
     description="A simple todo list with user authentication created in golang. I created this project while learning go and how to connect your website to a database."
     link="https://github.com/radeqq007/golang-todo-list"
   />
   <Works
     layout="right"
-    img="src\assets\img-to-ascii.png"
+    img="..\assets\img-to-ascii.png"
     name="IMAGE TO ASCII"
     description="Allows you to select file and convert it to ascii art. This way I learned to work with Pillow python library."
     link="https://github.com/radeqq007/image-to-ascii"
   />
   <Works
     layout="left"
-    img="src\assets\portfolio.png"
+    img="..\assets\portfolio.png"
     name="THIS PORTFOLIO!"
     description="I created this portfiolio with vue.js - a framework that I was learning for past few months."
     link="https://github.com/radeqq007/image-to-ascii"
