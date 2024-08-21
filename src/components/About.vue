@@ -1,6 +1,6 @@
 <template>
-  <div class="about section">
-    <h1>ABOUT ME</h1>
+  <div class="about section" id="about">
+    <h2>ABOUT ME</h2>
     <p>
       My journey with programming started about three years ago with python.
       Nowadays, I'm mostly comfortable with Go, particularly on backend

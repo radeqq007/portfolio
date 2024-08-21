@@ -1,49 +1,41 @@
 <template>
-  <nav>
-    <NavButton href="#about" content="about" />
-    <NavButton href="#works" content="works" />
-    <NavButton href="#social-links" content="follow me" />
-    <div class="nav-bg"></div>
-  </nav>
+  <Nav />
   <div class="line"></div>
 
   <Hero />
   <About />
+  <Works
+    title
+    layout="left"
+    img="src\assets\go-todo-list.png"
+    name="GO TODO LIST"
+    description="A simple todo list with user authentication created in golang. I created this project while learning go and how to connect your website to a database."
+    link="https://github.com/radeqq007/golang-todo-list"
+  />
+  <Works
+    layout="right"
+    img="src\assets\img-to-ascii.png"
+    name="IMAGE TO ASCII"
+    description="Allows you to select file and convert it to ascii art. This way I learned to work with Pillow python library."
+    link="https://github.com/radeqq007/image-to-ascii"
+  />
+  <Works
+    layout="left"
+    img="src\assets\portfolio.png"
+    name="THIS PORTFOLIO!"
+    description="I created this portfiolio with vue.js - a framework that I was learning for past few months."
+    link="https://github.com/radeqq007/image-to-ascii"
+  />
 </template>
 
 <script setup>
 import About from './components/About.vue';
 import Hero from './components/Hero.vue';
-import NavButton from './components/NavButton.vue';
+import Nav from './components/Nav.vue';
+import Works from './components/Works.vue';
 </script>
 
 <style>
-nav {
-  position: fixed;
-  padding: 1rem;
-  right: 2rem;
-  top: 1rem;
-  z-index: 100;
-
-  min-width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.nav-bg {
-  position: fixed;
-  z-index: -1;
-  background-color: var(--bg-color);
-  height: 5rem;
-  width: 100%;
-  transform: translateX(
-    -4%
-  ); /* This sucks but I don't feel like dealing with this right now */
-  filter: blur(50px);
-}
-
 .section {
   position: relative;
   height: 100vh;
@@ -65,7 +57,9 @@ nav {
   background-color: var(--primary-color);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   margin: 0;
   color: var(--primary-color);
   font-family: 'Kaushan Script';

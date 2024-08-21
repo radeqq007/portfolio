@@ -11,7 +11,7 @@ const props = defineProps({
 });
 </script>
 
-<style>
+<style scoped>
 a {
   color: var(--secondary-color);
   font-family: 'Karantina';
