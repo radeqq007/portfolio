@@ -5,18 +5,16 @@
     <NavButton href="#social-links" content="follow me" />
     <div class="nav-bg"></div>
   </nav>
-  <div class="wrapper">
-    <div class="line"></div>
+  <div class="line"></div>
 
-    <Hero />
-    <About />
-  </div>
+  <Hero />
+  <About />
 </template>
 
 <script setup>
-import NavButton from './components/NavButton.vue';
-import Hero from './components/Hero.vue';
 import About from './components/About.vue';
+import Hero from './components/Hero.vue';
+import NavButton from './components/NavButton.vue';
 </script>
 
 <style>
@@ -44,12 +42,6 @@ nav {
     -4%
   ); /* This sucks but I don't feel like dealing with this right now */
   filter: blur(50px);
-}
-
-/* TODO: Fix the scroll snap*/
-.wrapper {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
 .section {
