@@ -3,22 +3,22 @@
     <h2>SOCIAL LINKS</h2>
     <div class="links">
       <Link
-        img="../assets/svgs/github.svg"
+        img="/svgs/github.svg"
         name="GITHUB"
         href="https://www.github.com/radeqq007"
       />
       <Link
-        img="../assets/svgs/instagram.svg"
+        img="/svgs/instagram.svg"
         name="INSTAGRAM"
         href="https://www.instagram.com/radeqq__/"
       />
       <Link
-        img="../assets/svgs/x.svg"
+        img="/svgs/x.svg"
         name="X / TWITTER"
         href="https://x.com/wcale_nie_radek"
       />
       <Link
-        img="../assets/svgs/discord.svg"
+        img="/svgs/discord.svg"
         name="DISCORD"
         href="https://discordapp.com/users/695965239556177980"
       />

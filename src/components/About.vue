@@ -8,7 +8,7 @@
       Outside of coding I also enjoy reading, weightlifting, running, baking and
       chess.
     </p>
-    <img src="../assets/ghost gif.gif" alt="" />
+    <img src="/images/ghost-gif.gif" alt="" />
 
     <Blob />
   </div>
