@@ -38,6 +38,8 @@ img {
   grid-column-start: 2;
   grid-row-start: 1;
   width: 100%;
+  transform: scaleX(-1); /* it just looks better when flipped*/
+  rotate: -5deg;
 }
 
 .blob {
