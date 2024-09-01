@@ -7,14 +7,11 @@
     </h1>
     <p>A passionate software developer from Poland.</p>
 
-    <Blob />
-    <Blob />
+    <img src="/images/bg.png" alt="" />
   </div>
 </template>
 
-<script setup>
-import Blob from './Blob.vue';
-</script>
+<script setup></script>
 
 <style scoped>
 .hero {
@@ -36,14 +33,12 @@ p {
   grid-column-start: 2;
 }
 
-.blob:nth-of-type(1) {
-  right: -20rem;
-  bottom: -8rem;
-}
-
-.blob:nth-of-type(2) {
-  right: 8rem;
-  bottom: -20rem;
+img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 650px) {
@@ -51,13 +46,6 @@ p {
     padding-left: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, 1fr);
-  }
-
-  .blob:nth-of-type(1) {
-    bottom: -2rem;
-  }
-  .blob:nth-of-type(2) {
-    display: none;
   }
 
   h1 {

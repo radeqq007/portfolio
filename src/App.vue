@@ -65,9 +65,11 @@ h1,
 h2,
 h3 {
   margin: 0;
-  color: var(--primary-color);
-  font-family: 'Kaushan Script';
-  font-weight: normal;
+  color: var(--bg-color);
+  text-shadow: -1px -1px 0 var(--primary-color), -1px 1px 0 var(--primary-color),
+    1px 1px 0 var(--primary-color), 1px -1px 0 var(--primary-color);
+  font-family: Arial, sans-serif;
+  font-weight: 900;
   line-height: 1;
   font-size: 3rem;
 }

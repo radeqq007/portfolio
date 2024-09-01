@@ -5,7 +5,7 @@
       My journey with programming started about three years ago with python.
       Nowadays, I'm mostly comfortable with Go, particularly on backend
       development. However, I'm open to learning new languages and technologies.
-      Outside of coding I also enjoy reading, weightlifting, running, baking and
+      Outside of coding, I also enjoy reading, weightlifting, running, baking and
       chess.
     </p>
     <img src="/images/ghost-gif.gif" alt="" />
