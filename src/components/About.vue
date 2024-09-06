@@ -1,65 +1,58 @@
 <template>
-  <div class="about section" id="about">
-    <h2>ABOUT ME</h2>
-    <p>
-      My journey with programming started about three years ago with python.
-      Nowadays, I'm mostly comfortable with Go, particularly on backend
-      development. However, I'm open to learning new languages and technologies.
-      Outside of coding, I also enjoy reading, weightlifting, running, baking and
-      chess.
-    </p>
-    <img src="/images/ghost-gif.gif" alt="" />
-
-    <Blob />
+  <div class="about" id="about">
+    <div class="title">
+      <img src="/images/me.png" alt="" />
+      <h2>About me</h2>
+    </div>
+    <div class="content">
+      <p>Born in Poland, 17 years old software developer and student.</p>
+      <p>
+        My journey with programming started about three years ago with python,
+        but javascript was my first ever language I mastered. Nowadays, I'm
+        mostly comfortable with Go, particularly on backend development.
+        However, I'm open to learning new languages and technologies.
+      </p>
+      <p>
+        Outside of coding, I also enjoy reading, weightlifting, running and
+        chess. Recently, I've also picked up playing the guitar.
+      </p>
+    </div>
   </div>
 </template>
 
-<script setup>
-import Blob from './Blob.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10vh 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
 }
 
-h1 {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-p {
-  grid-column-start: 1;
-  grid-row-start: 2;
+.title {
+  width: 80%;
+  display: flex;
+  gap: 2rem;
+  justify-content: left;
+  align-items: center;
 }
 
 img {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  width: 100%;
-  transform: scaleX(-1); /* it just looks better when flipped*/
-  rotate: -5deg;
+  height: 6.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.blob {
-  right: -10rem;
-  bottom: -20rem;
+.content {
+  width: 80%;
 }
-
-@media only screen and (max-width: 650px) {
-  img {
-    display: none;
-  }
-
-  .about {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .blob {
-    bottom: 2rem;
-    right: -35rem;
-  }
+p {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: 2px;
 }
 </style>

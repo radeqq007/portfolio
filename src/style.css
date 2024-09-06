@@ -1,23 +1,12 @@
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+:root {
+  --bg: rgb(14, 13, 18);
+  --text: rgb(218, 218, 218);
+  --primary: rgb(255, 56, 182);
 }
 
 body {
+  background-color: var(--bg);
+  color: var(--text);
   margin: 0;
-  position: relative;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --bg-color: #080820;
-  --primary-color: #b60cff;
-  --secondary-color: #e0e0e0;
-}
-
-::-webkit-scrollbar {
-  display: none;
+  font-family: 'Archivo', sans-serif;
 }
