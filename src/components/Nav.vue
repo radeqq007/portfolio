@@ -11,7 +11,7 @@
 
 <style scoped>
 nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 6px;
   left: 0;
@@ -26,6 +26,7 @@ a {
   font-size: 2rem;
   color: var(--text);
   font-weight: 100;
+  text-shadow: 0 0 10px var(--bg);
 
   transition: color 0.1s ease-in-out;
 }
