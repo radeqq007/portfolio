@@ -1,7 +1,7 @@
 <template>
   <div class="about" id="about">
     <div class="title">
-      <img src="/images/me.png" alt="" />
+      <img src="/images/me.webp" alt="" />
       <h2>About me</h2>
     </div>
     <div class="content">
