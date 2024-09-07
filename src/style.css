@@ -4,6 +4,10 @@
   --primary: rgb(255, 56, 182);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text);
