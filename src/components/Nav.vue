@@ -7,49 +7,7 @@
   </nav>
 </template>
 
-<script setup>
-import gsap from 'gsap-trial';
-import SplitText from 'gsap-trial/SplitText';
-import { onMounted } from 'vue';
-
-gsap.registerPlugin(SplitText);
-
-onMounted(() => {
-  const links = document.querySelectorAll('nav a');
-
-  links.forEach(link => {
-    const split = new SplitText(link, {
-      type: 'chars',
-    });
-
-    const chars = split.chars;
-
-    const hoverTimeline = gsap.timeline({ paused: true });
-
-    hoverTimeline
-      .to(chars, {
-        yPercent: -100,
-        stagger: 0.01,
-        duration: 0.2,
-        ease: 'power1.inOut',
-      })
-      .to(chars, {
-        yPercent: 100,
-        duration: 0,
-      })
-      .to(chars, {
-        yPercent: 0,
-        stagger: 0.01,
-        duration: 0.2,
-        ease: 'power1.inOut',
-      });
-
-    link.addEventListener('click', () => {
-      hoverTimeline.restart();
-    });
-  });
-});
-</script>
+<script setup></script>
 
 <style scoped>
 nav {
