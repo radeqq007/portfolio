@@ -14,9 +14,10 @@ gsap.registerPlugin(TextPlugin);
 
 onMounted(() => {
   const phrases = [
-    'backend developer',
-    'frontend developer',
+    'software developer',
     'student from Poland',
+    'problem solver',
+    'open-source enthusiast',
   ];
 
   const mainTimeline = gsap.timeline({
