@@ -1,6 +1,21 @@
 <template>
   <div class="hero">
-    <h1>Radosław<br />Kaczmarczyk</h1>
+    <svg
+      id="animatedText"
+      viewBox="0 0 1200 300"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <text
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        class="header"
+      >
+        <tspan x="50%" dy="0">Radosław</tspan>
+        <tspan x="50%" dy="0.8em">Kaczmarczyk</tspan>
+      </text>
+    </svg>
     <p>A passionate <span id="typewriter"></span><span id="cursor"></span></p>
   </div>
 </template>
@@ -13,7 +28,7 @@ import { onMounted } from 'vue';
 gsap.registerPlugin(TextPlugin);
 
 onMounted(() => {
-  const phrases = [
+  const phrases: Array<string> = [
     'software developer',
     'student from Poland',
     'problem solver',
@@ -24,11 +39,32 @@ onMounted(() => {
     repeat: -1,
   });
 
+  const headerTimeline = gsap.timeline({});
+
+  // Animate the header stroke effect and make the subheader appear
+  headerTimeline
+    .to('.header', {
+      strokeDasharray: '10rem 0',
+      strokeDashoffset: '10%',
+      duration: 1.8,
+      ease: 'power1.out',
+    })
+    .to('.header', {
+      fill: 'white',
+      duration: 0.2,
+    })
+    .to('p', {
+      opacity: 1,
+      duration: 1,
+    });
+
+  headerTimeline.add(mainTimeline);
+
   phrases.forEach(phrase => {
     const textTimeline = gsap.timeline({
       repeat: 1,
       yoyo: true,
-      repeatDelay: 3,
+      repeatDelay: 5,
     });
 
     textTimeline.to('#typewriter', {
@@ -50,15 +86,25 @@ onMounted(() => {
   align-items: center;
 }
 
-h1 {
+svg {
+  width: 80vw;
+  height: 45vh;
+}
+.header {
   font-size: 8rem;
   font-weight: 900;
   text-align: center;
-  line-height: 0.8;
   margin: 0;
+
+  fill: transparent;
+  stroke: white;
+  stroke-width: 1;
+  stroke-dashoffset: 25%;
+  stroke-dasharray: 0rem 20%;
 }
 
 p {
+  opacity: 0;
   font-weight: 300;
   font-size: 2rem;
 }
