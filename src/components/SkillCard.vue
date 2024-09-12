@@ -9,7 +9,7 @@
 import { useMouseInElement } from '@vueuse/core';
 import { computed, ref } from 'vue';
 
-const props = defineProps({
+const { img, text } = defineProps({
   img: String,
   text: String,
 });
@@ -49,7 +49,7 @@ const cardTransform = computed(() => {
 
   filter: grayscale(1);
 
-  transition: 0.2s ease-in-out filter, 0.1s ease-in-out color,
+  transition: 0.2s ease-in-out filter, 0.2s ease-in-out color,
     0.2s ease-in-out scale;
 }
 
