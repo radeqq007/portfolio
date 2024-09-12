@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { useMouseInElement } from '@vueuse/core';
-import { computed, defineProps, ref } from 'vue';
+import { computed, ref } from 'vue';
 
 const props = defineProps({
   img: String,
