@@ -3,6 +3,7 @@
     <Nav />
     <Hero />
     <About />
+    <Skills />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import About from './components/About.vue';
 import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
+import Skills from './components/Skills.vue';
 </script>
 
 <style>

@@ -28,11 +28,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px;
 }
 
 .title {
-  width: 80%;
   display: flex;
   gap: 2rem;
   justify-content: left;
@@ -46,8 +44,9 @@ img {
   object-fit: cover;
 }
 
-.content {
-  width: 80%;
+.content,
+.title {
+  width: 75%;
 }
 p {
   font-size: 2rem;
