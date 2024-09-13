@@ -12,7 +12,7 @@
         text-anchor="middle"
         class="header"
       >
-        <tspan x="50%" dy="0">Radosław</tspan>
+        <tspan dy="0">Radosław</tspan>
         <tspan x="50%" dy="0.8em">Kaczmarczyk</tspan>
       </text>
     </svg>
@@ -111,5 +111,20 @@ p {
 
 #typewriter {
   color: var(--primary);
+}
+
+@media screen and (max-width: 600px) {
+  svg {
+    width: 100%;
+    height: 10rem;
+  }
+
+  .header {
+    font-size: 10rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 }
 </style>
