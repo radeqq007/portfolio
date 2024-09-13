@@ -54,4 +54,26 @@ p {
   line-height: 1.2;
   letter-spacing: 2px;
 }
+
+@media screen and (max-width: 600px) {
+  .title {
+    flex-direction: column;
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 4.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border: 4px solid var(--primary);
+    height: 10rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}
 </style>
