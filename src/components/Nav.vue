@@ -75,12 +75,14 @@ menu;
 
 <style scoped>
 nav {
+  height: 4rem;
   position: fixed;
   width: 100%;
-  top: 6px;
+  background-image: linear-gradient(var(--bg) 60%, rgba(0, 0, 0, 0));
+  padding-top: 6px;
   left: 0;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 2rem;
 }
@@ -93,7 +95,6 @@ a {
   font-size: 2rem;
   color: var(--text);
   font-weight: 100;
-  text-shadow: 0 0 10px var(--bg);
 
   transition: color 0.1s ease-in-out;
   overflow: hidden;
