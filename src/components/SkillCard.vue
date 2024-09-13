@@ -45,7 +45,11 @@ onMounted(() => {
     scale: 1,
     opacity: 1,
     duration: 0.5,
-    scrollTrigger: card.value,
+    ease: 'back.out',
+    scrollTrigger: {
+      trigger: card.value,
+      start: 'top bottom',
+    },
   });
 });
 </script>
