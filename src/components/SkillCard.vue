@@ -7,7 +7,11 @@
 
 <script setup lang="ts">
 import { useMouseInElement } from '@vueuse/core';
-import { computed, ref } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { computed, onMounted, ref } from 'vue';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const { img, text } = defineProps({
   img: String,
@@ -35,10 +39,21 @@ const cardTransform = computed(() => {
     ? ''
     : `perspective(${elementWidth.value}px) rotateX(${rotationX}deg)  rotateY(${rotationY}deg)`;
 });
+
+onMounted(() => {
+  gsap.to(card.value, {
+    scale: 1,
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: card.value,
+  });
+});
 </script>
 
 <style scoped>
 .card {
+  scale: 0.95;
+  opacity: 0;
   padding: 0.1rem;
   display: flex;
   justify-content: space-evenly;
