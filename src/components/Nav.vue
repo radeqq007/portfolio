@@ -1,5 +1,10 @@
 <template>
-  <nav>
+  <div @click="toggleMenu" class="menu-toggle" ref="menu">
+    <div class="bar" ref="bar1"></div>
+    <div class="bar" ref="bar2"></div>
+    <div class="bar" ref="bar3"></div>
+  </div>
+  <nav :class="isMenuVisible ? 'active' : ''">
     <a href="#about">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#work">Work</a>
@@ -7,7 +12,66 @@
   </nav>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+import { gsap } from 'gsap';
+import { ref } from 'vue';
+
+const menu = ref(null);
+
+const bar1 = ref(null);
+const bar2 = ref(null);
+const bar3 = ref(null);
+
+const isMenuVisible = ref(false);
+
+const toggleMenu = () => {
+  const duration: number = 0.6;
+
+  isMenuVisible.value = !isMenuVisible.value;
+
+  // TODO: Fix this
+  if (!isMenuVisible.value) {
+    gsap.to(bar1.value, {
+      duration: duration,
+      transform: 'rotate(45deg)',
+      top: '10%',
+      ease: 'bounce.out',
+    });
+    gsap.to(bar2.value, {
+      duration: duration,
+      opacity: 0,
+    });
+
+    gsap.to(bar3.value, {
+      duration: duration,
+      transform: 'rotate(-45deg)',
+      top: '-10%',
+      ease: 'bounce.out',
+      y: -10,
+    });
+  } else {
+    gsap.to(bar1.value, {
+      duration: duration,
+      transform: 'rotate(0)',
+      top: 0,
+
+      ease: 'bounce.out',
+    });
+    gsap.to(bar2.value, {
+      duration: duration,
+      opacity: 1,
+    });
+    gsap.to(bar3.value, {
+      duration: duration,
+      transform: 'rotate(0)',
+      top: 0,
+      ease: 'bounce.out',
+    });
+  }
+};
+
+menu;
+</script>
 
 <style scoped>
 nav {
@@ -19,6 +83,9 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+}
+.menu-toggle {
+  display: none;
 }
 
 a {
@@ -34,5 +101,34 @@ a {
 
 a:hover {
   color: var(--primary);
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--primary);
+  }
+
+  .bar {
+    position: relative;
+    width: 60%;
+    height: 4px;
+    border-radius: 2rem;
+    background-color: var(--bg);
+  }
 }
 </style>
