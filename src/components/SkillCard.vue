@@ -73,11 +73,18 @@ onMounted(() => {
   color: var(--text);
   scale: 1.1;
 }
+
 img {
   height: 4rem;
 }
 
 p {
   font-size: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    filter: grayscale(0);
+  }
 }
 </style>
