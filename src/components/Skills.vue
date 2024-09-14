@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="skills" id="skills">
     <h2>Skills</h2>
     <div class="skill-grid">
       <skillCard
