@@ -34,38 +34,43 @@ const toggleMenu = () => {
     gsap.to(bar1.value, {
       duration: duration,
       transform: 'rotate(45deg)',
-      top: '10%',
-      ease: 'bounce.out',
+      top: '47.5%', // For whatever reason 50% is too much
+      ease: 'power3.out',
     });
     gsap.to(bar2.value, {
       duration: duration,
       opacity: 0,
+      ease: 'power3.out',
     });
 
     gsap.to(bar3.value, {
       duration: duration,
       transform: 'rotate(-45deg)',
-      top: '-10%',
-      ease: 'bounce.out',
-      y: -10,
+      bottom: '47.5%', // For whatever reason 50% is too much
+      ease: 'power3.out',
+    });
+
+    gsap.to('.menu-toggle', {
+      duration: duration,
     });
   } else {
     gsap.to(bar1.value, {
       duration: duration,
       transform: 'rotate(0)',
-      top: 0,
-
-      ease: 'bounce.out',
+      top: '30%',
+      ease: 'power3.out',
     });
     gsap.to(bar2.value, {
       duration: duration,
       opacity: 1,
+      ease: 'power3.out',
     });
     gsap.to(bar3.value, {
       duration: duration,
       transform: 'rotate(0)',
-      top: 0,
-      ease: 'bounce.out',
+      bottom: '30%',
+
+      ease: 'power3.out',
     });
   }
 };
@@ -125,11 +130,18 @@ a:hover {
   }
 
   .bar {
-    position: relative;
+    position: absolute;
     width: 60%;
     height: 4px;
     border-radius: 2rem;
     background-color: var(--bg);
+  }
+
+  .bar:nth-of-type(1) {
+    top: 30%;
+  }
+  .bar:nth-of-type(3) {
+    bottom: 30%;
   }
 }
 </style>
