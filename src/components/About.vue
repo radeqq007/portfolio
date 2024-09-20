@@ -42,9 +42,7 @@
 }
 p {
   font-size: 2rem;
-  font-weight: 100;
   line-height: 1.2;
-  letter-spacing: 2px;
 }
 
 @media screen and (max-width: 600px) {
@@ -54,9 +52,6 @@ p {
 
   h2 {
     width: 100%;
-    font-size: 4.2rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
   }
 
   p {

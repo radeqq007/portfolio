@@ -28,10 +28,10 @@
 </template>
 
 <script setup lang="ts">
+import { useMouseInElement } from '@vueuse/core';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import { onMounted, ref, computed } from 'vue';
-import { useMouseInElement } from '@vueuse/core';
+import { computed, onMounted, ref } from 'vue';
 
 gsap.registerPlugin(TextPlugin);
 
