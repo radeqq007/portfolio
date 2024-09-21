@@ -23,6 +23,10 @@
         text="Tailwind"
       />
       <skillCard
+        img="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+        text="vue.js"
+      />
+      <skillCard
         img="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"
         text="Go"
       />
