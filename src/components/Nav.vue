@@ -14,7 +14,8 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap';
-import { ref } from 'vue';
+import SplitType from 'split-type';
+import { onMounted, ref } from 'vue';
 
 const menu = ref(null);
 
@@ -70,7 +71,30 @@ const toggleMenu = () => {
   }
 };
 
-menu;
+// h2 hover effect
+onMounted(() => {
+  const headersText = SplitType.create('a');
+  if (headersText.lines != null) {
+    headersText.lines.forEach(line => {
+      const hoverTimeline = gsap.timeline({ paused: true });
+      hoverTimeline
+        .to(line, {
+          scale: 0.9,
+          duration: 0.1,
+          ease: 'power1.out',
+        })
+        .to(line, {
+          scale: 1,
+          duration: 0.8,
+          ease: 'bounce.out',
+        });
+
+      line.addEventListener('click', () => {
+        hoverTimeline.restart();
+      });
+    });
+  }
+});
 </script>
 
 <style scoped>
@@ -97,12 +121,13 @@ a {
   color: var(--text);
   font-weight: 100;
 
-  transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, scale 0.1s ease-in-out;
   overflow: hidden;
 }
 
 a:hover {
   color: var(--primary);
+  scale: 1.05;
 }
 
 @media screen and (max-width: 600px) {
