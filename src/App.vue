@@ -34,7 +34,7 @@ onMounted(() => {
           ease: 'bounce.out',
         });
 
-      char.addEventListener('mouseover', () => {
+      char.addEventListener('mouseenter', () => {
         hoverTimeline.restart();
       });
     });
