@@ -8,10 +8,38 @@
 </template>
 
 <script setup lang="ts">
+import gsap from 'gsap';
+import SplitType from 'split-type';
+import { onMounted } from 'vue';
 import About from './components/About.vue';
 import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
 import Skills from './components/Skills.vue';
+
+// h2 hover effect
+onMounted(() => {
+  const headersText = SplitType.create('h2');
+  if (headersText.chars != null) {
+    headersText.chars.forEach(char => {
+      const hoverTimeline = gsap.timeline({ paused: true });
+      hoverTimeline
+        .to(char, {
+          scale: 1.1,
+          duration: 0.5,
+          ease: 'bounce.out',
+        })
+        .to(char, {
+          scale: 1,
+          duration: 1,
+          ease: 'bounce.out',
+        });
+
+      char.addEventListener('mouseover', () => {
+        hoverTimeline.restart();
+      });
+    });
+  }
+});
 </script>
 
 <style>
@@ -21,6 +49,8 @@ h2 {
   font-size: 5rem;
   color: var(--primary);
   letter-spacing: 4px;
+  overflow: hidden;
+  cursor: default;
 }
 
 p {
