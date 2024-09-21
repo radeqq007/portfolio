@@ -75,6 +75,7 @@ menu;
 
 <style scoped>
 nav {
+  z-index: 100;
   height: 4rem;
   position: fixed;
   width: 100%;
