@@ -113,6 +113,7 @@ nav {
 }
 .menu-toggle {
   display: none;
+  z-index: 999;
 }
 
 a {
