@@ -45,7 +45,7 @@ onMounted(() => {
 
     card.value.addEventListener('mouseleave', () => {
       gsap.to(card.value, {
-        filter: 'grayscale(1)',
+        filter: window.innerWidth <= 600 ? 'grayscale(0)' : 'grayscale(1)', // Don't apply grayscale when on mobile
         color: 'color-mix(in srgb, var(--text) 60%, transparent)',
         scale: 1,
         duration: 0.5,
