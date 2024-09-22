@@ -26,12 +26,12 @@ onMounted(() => {
         .to(char, {
           scale: 1.1,
           duration: 0.5,
-          ease: 'bounce.out',
+          ease: 'back.out',
         })
         .to(char, {
           scale: 1,
           duration: 1,
-          ease: 'bounce.out',
+          ease: 'back.out',
         });
 
       char.addEventListener('mouseenter', () => {
