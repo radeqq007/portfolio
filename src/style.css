@@ -9,6 +9,9 @@ html {
 }
 
 body {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 6%, var(--bg) 8%);
+  background-position: 0% 0%;
+  background-size: 4vmin 4vmin;
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
