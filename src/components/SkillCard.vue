@@ -8,6 +8,7 @@
 <script setup lang="ts">
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import type { Ref } from 'vue';
 import { onMounted, ref } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +18,7 @@ const { img, text } = defineProps({
   text: String,
 });
 
-const card = ref(null);
+const card: Ref<HTMLElement | null> = ref<HTMLElement | null>(null);
 
 onMounted(() => {
   if (card.value) {
