@@ -86,7 +86,7 @@ onMounted(() => {
         .to(line, {
           scale: 1,
           duration: 0.8,
-          ease: 'bounce.out',
+          ease: 'back.out',
         });
 
       line.addEventListener('click', () => {
