@@ -67,7 +67,7 @@ onMounted(() => {
   border-radius: 1rem;
   background-color: color-mix(in srgb, white 4%, transparent);
   border: 1px solid color-mix(in srgb, white 10%, transparent);
-
+  backdrop-filter: blur(1.8px);
   color: color-mix(in srgb, var(--text) 60%, transparent);
 
   filter: grayscale(1);
