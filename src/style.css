@@ -9,11 +9,22 @@ html {
 }
 
 body {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 6%, var(--bg) 8%);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 6%, var(--bg) 8%);
   background-position: 0% 0%;
   background-size: 4vmin 4vmin;
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
   font-family: 'Raleway', sans-serif;
+
+  animation: bg-animation 300s infinite linear;
+}
+
+@keyframes bg-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% -100%;
+  }
 }
