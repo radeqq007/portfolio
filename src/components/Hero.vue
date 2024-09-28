@@ -1,5 +1,12 @@
 <template>
   <div class="hero">
+    <img
+      src="/images/me.webp"
+      :style="{ transform: imgTransform }"
+      alt=""
+      ref="img"
+    />
+
     <svg
       id="animatedText"
       viewBox="0 0 1200 300"
@@ -7,7 +14,7 @@
     >
       <text
         x="50%"
-        y="50%"
+        y="30%"
         dominant-baseline="middle"
         text-anchor="middle"
         class="header"
@@ -21,9 +28,10 @@
 </template>
 
 <script setup lang="ts">
+import { useMouseInElement } from '@vueuse/core';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import { onMounted } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -75,6 +83,28 @@ onMounted(() => {
     mainTimeline.add(textTimeline);
   });
 });
+
+const img = ref(null);
+const { elementX, elementY, isOutside, elementHeight, elementWidth } =
+  useMouseInElement(img);
+
+const imgTransform = computed(() => {
+  const maxRotation: number = 2;
+
+  const rotationX = (
+    maxRotation / 2 -
+    (elementY.value / elementHeight.value) * maxRotation
+  ).toFixed(2);
+
+  const rotationY = (
+    (elementX.value / elementWidth.value) * maxRotation -
+    maxRotation / 2
+  ).toFixed(2);
+
+  return isOutside.value
+    ? ''
+    : `perspective(${elementWidth.value}px) rotateX(${rotationX}deg)  rotateY(${rotationY}deg)`;
+});
 </script>
 
 <style scoped>
@@ -86,12 +116,23 @@ onMounted(() => {
   align-items: center;
 }
 
+img {
+  margin-top: 60px;
+  border: 4px solid var(--primary);
+  width: 20rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.01s ease-in-out;
+}
+
 svg {
   width: 80vw;
-  height: 45vh;
+  height: 30vh;
+  margin: 0;
 }
 .header {
-  font-size: 8rem;
+  font-size: 10rem;
   font-weight: 900;
   text-align: center;
   margin: 0;

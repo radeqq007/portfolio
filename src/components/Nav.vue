@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const menu = ref(null);
 
@@ -138,12 +138,14 @@ const toggleMenu = () => {
       '0'
     );
   }
+
   isMenuVisible.value = !isMenuVisible.value;
 };
 </script>
 
 <style scoped>
 nav {
+  z-index: 100;
   height: 4rem;
   position: fixed;
   width: 100%;
@@ -157,6 +159,7 @@ nav {
 }
 .menu-toggle {
   display: none;
+  z-index: 999;
 }
 
 a {
@@ -165,12 +168,13 @@ a {
   color: var(--text);
   font-weight: 100;
 
-  transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, scale 0.1s ease-in-out;
   overflow: hidden;
 }
 
 a:hover {
   color: var(--primary);
+  scale: 1.05;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,7 +1,6 @@
 <template>
   <div class="about" id="about">
     <div class="title">
-      <img src="/images/me.webp" alt="" />
       <h2>About me</h2>
     </div>
     <div class="content">
@@ -37,22 +36,13 @@
   align-items: center;
 }
 
-img {
-  height: 6.4rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .content,
 .title {
   width: 75%;
 }
 p {
   font-size: 2rem;
-  font-weight: 100;
   line-height: 1.2;
-  letter-spacing: 2px;
 }
 
 @media screen and (max-width: 600px) {
@@ -62,14 +52,6 @@ p {
 
   h2 {
     width: 100%;
-    font-size: 4.2rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
-  img {
-    border: 4px solid var(--primary);
-    height: 10rem;
   }
 
   p {
