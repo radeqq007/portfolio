@@ -4,11 +4,11 @@
     <div class="bar" ref="bar2"></div>
     <div class="bar" ref="bar3"></div>
   </div>
-  <nav :class="isMenuVisible ? 'active' : ''">
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
+  <nav :class="isMenuVisible ? 'active' : ''" ref="nav">
+    <a @click="closeMenuOnLinkClick" href="#about">About Me</a>
+    <a @click="closeMenuOnLinkClick" href="#skills">Skills</a>
+    <a @click="closeMenuOnLinkClick" href="#work">Work</a>
+    <a @click="closeMenuOnLinkClick" href="#contact">Contact</a>
   </nav>
 </template>
 
@@ -17,6 +17,8 @@ import { gsap } from 'gsap';
 import { ref } from 'vue';
 
 const menu = ref(null);
+
+const nav = ref(null);
 
 const bar1 = ref(null);
 const bar2 = ref(null);
@@ -84,6 +86,17 @@ const toggleMenu = () => {
       },
       '0'
     );
+
+    tl.to(
+      nav.value,
+      {
+        duration: 0.1,
+        height: '100vh',
+        top: '0',
+        borderRadius: '0',
+      },
+      '0'
+    );
   } else {
     tl.to(
       bar1.value,
@@ -137,9 +150,25 @@ const toggleMenu = () => {
       },
       '0'
     );
+
+    tl.to(
+      nav.value,
+      {
+        duration: 0.1,
+        height: '0',
+        top: '-10%',
+      },
+      '0'
+    );
   }
 
   isMenuVisible.value = !isMenuVisible.value;
+};
+
+const closeMenuOnLinkClick = () => {
+  if (isMenuVisible.value) {
+    toggleMenu();
+  }
 };
 </script>
 
@@ -179,7 +208,26 @@ a:hover {
 
 @media screen and (max-width: 600px) {
   nav {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    background-image: none;
+    background-color: var(--primary);
+    top: -10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: height 0.2s ease-in-out;
+  }
+
+  a {
+    font-weight: 200;
+    font-size: 3rem;
+  }
+
+  a:hover {
+    color: var(--text);
   }
 
   .menu-toggle {
