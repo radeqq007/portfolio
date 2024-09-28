@@ -26,56 +26,120 @@ const isMenuVisible = ref(false);
 
 const toggleMenu = () => {
   const duration: number = 0.6;
+  const tl = gsap.timeline({});
 
-  isMenuVisible.value = !isMenuVisible.value;
-
-  // TODO: Fix this
   if (!isMenuVisible.value) {
-    gsap.to(bar1.value, {
-      duration: duration,
-      transform: 'rotate(45deg)',
-      top: '47.5%', // For whatever reason 50% is too much
-      ease: 'power3.out',
-    });
-    gsap.to(bar2.value, {
-      duration: duration,
-      opacity: 0,
-      ease: 'power3.out',
-    });
+    tl.to(
+      bar1.value,
+      {
+        duration: 0.2,
+        top: '47.5%', // For whatever reason 50% is too much
+        ease: 'power3.out',
+      },
+      '0'
+    );
+    tl.to(
+      bar3.value,
+      {
+        duration: 0.5,
+        bottom: '47.5%', // For whatever reason 50% is too much
+        ease: 'power3.out',
+      },
+      '0'
+    );
 
-    gsap.to(bar3.value, {
-      duration: duration,
-      transform: 'rotate(-45deg)',
-      bottom: '47.5%', // For whatever reason 50% is too much
-      ease: 'power3.out',
-    });
+    tl.to(
+      bar1.value,
+      {
+        duration: duration,
+        transform: 'rotate(45deg)',
+        ease: 'power3.out',
+      },
+      '0.2'
+    );
+    tl.to(
+      bar2.value,
+      {
+        duration: duration,
+        opacity: 0,
+        ease: 'power3.out',
+      },
+      '0'
+    );
 
-    gsap.to('.menu-toggle', {
-      duration: duration,
-    });
+    tl.to(
+      bar3.value,
+      {
+        duration: duration,
+        transform: 'rotate(-45deg)',
+        ease: 'power3.out',
+      },
+      '0.2'
+    );
+
+    tl.to(
+      '.menu-toggle',
+      {
+        duration: duration,
+      },
+      '0'
+    );
   } else {
-    gsap.to(bar1.value, {
-      duration: duration,
-      transform: 'rotate(0)',
-      top: '30%',
-      ease: 'power3.out',
-    });
-    gsap.to(bar2.value, {
-      duration: duration,
-      opacity: 1,
-      ease: 'power3.out',
-    });
-    gsap.to(bar3.value, {
-      duration: duration,
-      transform: 'rotate(0)',
-      bottom: '30%',
+    tl.to(
+      bar1.value,
+      {
+        duration: duration,
+        transform: 'rotate(0)',
+        ease: 'power3.out',
+      },
+      '0'
+    );
+    tl.to(
+      bar3.value,
+      {
+        duration: duration,
+        transform: 'rotate(0)',
+        ease: 'power3.out',
+      },
+      '0'
+    );
+    tl.to(
+      bar1.value,
+      {
+        duration: 0.4,
+        top: '30%',
+      },
+      '0.2'
+    );
+    tl.to(
+      bar3.value,
+      {
+        duration: 0.4,
+        bottom: '30%',
+      },
+      '0.2'
+    );
 
-      ease: 'power3.out',
-    });
+    tl.to(
+      bar2.value,
+      {
+        duration: duration,
+        opacity: 1,
+        ease: 'power3.out',
+      },
+      '0'
+    );
+
+    tl.to(
+      '.menu-toggle',
+      {
+        duration: duration,
+      },
+      '0'
+    );
   }
+  isMenuVisible.value = !isMenuVisible.value;
 };
-
-menu;
 </script>
 
 <style scoped>
