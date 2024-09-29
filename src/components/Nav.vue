@@ -55,6 +55,7 @@ const toggleMenu = () => {
       {
         duration: duration,
         transform: 'rotate(45deg)',
+        backgroundColor: 'rgb(255, 56, 182)',
         ease: 'power3.out',
       },
       '0.2'
@@ -73,6 +74,7 @@ const toggleMenu = () => {
       bar3.value,
       {
         duration: duration,
+        backgroundColor: 'rgb(255, 56, 182)',
         transform: 'rotate(-45deg)',
         ease: 'power3.out',
       },
@@ -90,10 +92,19 @@ const toggleMenu = () => {
     tl.to(
       nav.value,
       {
-        duration: 0.1,
+        duration: 0.4,
         height: '100vh',
         top: '0',
         borderRadius: '0',
+        ease: 'power3.out',
+      },
+      '0'
+    );
+    tl.to(
+      '.menu-toggle',
+      {
+        backgroundColor: 'rgb(14, 13, 18)',
+        duration: duration,
       },
       '0'
     );
@@ -103,6 +114,8 @@ const toggleMenu = () => {
       {
         duration: duration,
         transform: 'rotate(0)',
+
+        backgroundColor: 'rgb(14, 13, 18)',
         ease: 'power3.out',
       },
       '0'
@@ -112,6 +125,7 @@ const toggleMenu = () => {
       {
         duration: duration,
         transform: 'rotate(0)',
+        backgroundColor: 'rgb(14, 13, 18)',
         ease: 'power3.out',
       },
       '0'
@@ -146,6 +160,7 @@ const toggleMenu = () => {
     tl.to(
       '.menu-toggle',
       {
+        backgroundColor: 'rgb(255, 56, 182)',
         duration: duration,
       },
       '0'
@@ -154,9 +169,10 @@ const toggleMenu = () => {
     tl.to(
       nav.value,
       {
-        duration: 0.1,
+        duration: 0.2,
         height: '0',
         top: '-10%',
+        ease: 'power3.in',
       },
       '0'
     );
@@ -217,8 +233,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    transition: height 0.2s ease-in-out;
   }
 
   a {
