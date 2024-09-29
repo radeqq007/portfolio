@@ -39,75 +39,77 @@ const toggleMenu = () => {
         ease: 'power3.out',
       },
       '0'
-    );
-    tl.to(
-      bar3.value,
-      {
-        duration: 0.5,
-        bottom: '47.5%', // For whatever reason 50% is too much
-        ease: 'power3.out',
-      },
-      '0'
-    );
+    )
+      .to(
+        bar3.value,
+        {
+          duration: 0.5,
+          bottom: '47.5%', // For whatever reason 50% is too much
+          ease: 'power3.out',
+        },
+        '0'
+      )
 
-    tl.to(
-      bar1.value,
-      {
-        duration: duration,
-        transform: 'rotate(45deg)',
-        backgroundColor: 'rgb(255, 56, 182)',
-        ease: 'power3.out',
-      },
-      '0.2'
-    );
-    tl.to(
-      bar2.value,
-      {
-        duration: duration,
-        opacity: 0,
-        ease: 'power3.out',
-      },
-      '0'
-    );
+      .to(
+        bar1.value,
+        {
+          duration: duration,
+          transform: 'rotate(45deg)',
+          backgroundColor: 'rgb(255, 56, 182)',
+          ease: 'power3.out',
+        },
+        '0.2'
+      )
 
-    tl.to(
-      bar3.value,
-      {
-        duration: duration,
-        backgroundColor: 'rgb(255, 56, 182)',
-        transform: 'rotate(-45deg)',
-        ease: 'power3.out',
-      },
-      '0.2'
-    );
+      .to(
+        bar2.value,
+        {
+          duration: duration,
+          opacity: 0,
+          ease: 'power3.out',
+        },
+        '0'
+      )
 
-    tl.to(
-      '.menu-toggle',
-      {
-        duration: duration,
-      },
-      '0'
-    );
+      .to(
+        bar3.value,
+        {
+          duration: duration,
+          backgroundColor: 'rgb(255, 56, 182)',
+          transform: 'rotate(-45deg)',
+          ease: 'power3.out',
+        },
+        '0.2'
+      )
 
-    tl.to(
-      nav.value,
-      {
-        duration: 0.4,
-        height: '100vh',
-        top: '0',
-        borderRadius: '0',
-        ease: 'power3.out',
-      },
-      '0'
-    );
-    tl.to(
-      '.menu-toggle',
-      {
-        backgroundColor: 'rgb(14, 13, 18)',
-        duration: duration,
-      },
-      '0'
-    );
+      .to(
+        '.menu-toggle',
+        {
+          duration: duration,
+        },
+        '0'
+      )
+
+      .to(
+        nav.value,
+        {
+          duration: 0.4,
+          height: '100vh',
+          top: '0',
+          borderRadius: '0',
+          ease: 'power3.out',
+        },
+        '0'
+      )
+
+      .to(
+        '.menu-toggle',
+        {
+          backgroundColor: 'rgb(14, 13, 18)',
+          duration: duration,
+        },
+        '0'
+      );
   } else {
     tl.to(
       bar1.value,
@@ -119,63 +121,66 @@ const toggleMenu = () => {
         ease: 'power3.out',
       },
       '0'
-    );
-    tl.to(
-      bar3.value,
-      {
-        duration: duration,
-        transform: 'rotate(0)',
-        backgroundColor: 'rgb(14, 13, 18)',
-        ease: 'power3.out',
-      },
-      '0'
-    );
-    tl.to(
-      bar1.value,
-      {
-        duration: 0.4,
-        top: '30%',
-      },
-      '0.2'
-    );
-    tl.to(
-      bar3.value,
-      {
-        duration: 0.4,
-        bottom: '30%',
-      },
-      '0.2'
-    );
+    )
 
-    tl.to(
-      bar2.value,
-      {
-        duration: duration,
-        opacity: 1,
-        ease: 'power3.out',
-      },
-      '0'
-    );
+      .to(
+        bar3.value,
+        {
+          duration: duration,
+          transform: 'rotate(0)',
+          backgroundColor: 'rgb(14, 13, 18)',
+          ease: 'power3.out',
+        },
+        '0'
+      )
 
-    tl.to(
-      '.menu-toggle',
-      {
-        backgroundColor: 'rgb(255, 56, 182)',
-        duration: duration,
-      },
-      '0'
-    );
+      .to(
+        bar1.value,
+        {
+          duration: 0.4,
+          top: '30%',
+        },
+        '0.2'
+      )
 
-    tl.to(
-      nav.value,
-      {
-        duration: 0.2,
-        height: '0',
-        top: '-10%',
-        ease: 'power3.in',
-      },
-      '0'
-    );
+      .to(
+        bar3.value,
+        {
+          duration: 0.4,
+          bottom: '30%',
+        },
+        '0.2'
+      )
+
+      .to(
+        bar2.value,
+        {
+          duration: duration,
+          opacity: 1,
+          ease: 'power3.out',
+        },
+        '0'
+      )
+
+      .to(
+        '.menu-toggle',
+        {
+          backgroundColor: 'rgb(255, 56, 182)',
+          duration: duration,
+        },
+        '0'
+      )
+
+      .to(
+        nav.value,
+        {
+          duration: 0.2,
+          height: '0',
+          top: '-10%',
+          ease: 'power3.in',
+        },
+        '0'
+      );
   }
 
   isMenuVisible.value = !isMenuVisible.value;
