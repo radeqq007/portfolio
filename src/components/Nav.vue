@@ -232,9 +232,8 @@ a:hover {
     height: 0;
     overflow: hidden;
     background-image: none;
-    background-color: var(--primary);
+    background-color: var(--bg);
     top: -10%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,7 +245,7 @@ a:hover {
   }
 
   a:hover {
-    color: var(--text);
+    color: var(--primary);
   }
 
   .menu-toggle {
