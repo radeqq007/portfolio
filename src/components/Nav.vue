@@ -196,16 +196,18 @@ const closeMenuOnLinkClick = () => {
 <style scoped>
 nav {
   z-index: 100;
-  height: 4rem;
   position: fixed;
   width: 100%;
-  background-image: linear-gradient(var(--bg) 60%, rgba(0, 0, 0, 0));
-  padding-top: 6px;
   left: 0;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+
   gap: 2rem;
+  height: 0;
+  overflow: hidden;
+  background-color: var(--bg);
 }
 .menu-toggle {
   display: none;
@@ -220,6 +222,8 @@ a {
 
   transition: color 0.1s ease-in-out, scale 0.1s ease-in-out;
   overflow: hidden;
+  font-weight: 200;
+  font-size: 3rem;
 }
 
 a:hover {
@@ -227,55 +231,33 @@ a:hover {
   scale: 1.05;
 }
 
-@media screen and (max-width: 600px) {
-  nav {
-    height: 0;
-    overflow: hidden;
-    background-image: none;
-    background-color: var(--bg);
-    top: -10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
 
-  a {
-    font-weight: 200;
-    font-size: 3rem;
-  }
+.bar {
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  border-radius: 2rem;
+  background-color: var(--bg);
+}
 
-  a:hover {
-    color: var(--primary);
-  }
-
-  .menu-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 5rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: var(--primary);
-  }
-
-  .bar {
-    position: absolute;
-    width: 60%;
-    height: 4px;
-    border-radius: 2rem;
-    background-color: var(--bg);
-  }
-
-  .bar:nth-of-type(1) {
-    top: 30%;
-  }
-  .bar:nth-of-type(3) {
-    bottom: 30%;
-  }
+.bar:nth-of-type(1) {
+  top: 30%;
+}
+.bar:nth-of-type(3) {
+  bottom: 30%;
 }
 </style>
