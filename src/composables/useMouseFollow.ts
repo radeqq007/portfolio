@@ -14,7 +14,12 @@ export const useMouseFollow = (
     height: elementHeight,
   } = useElementBounding(elementRef);
 
+  const isMobile = () => {
+    return window.matchMedia('(max-width: 768px)').matches; // Check for mobile devices
+  };
+
   const activateMouseFollow = (e: MouseEvent) => {
+    if (isMobile()) return;
     const newX =
       ((e.clientX - elementX.value) / elementWidth.value - 0.5) *
       followStrength;
