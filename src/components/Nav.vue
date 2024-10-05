@@ -1,5 +1,11 @@
 <template>
-  <div @click="toggleMenu" class="menu-toggle" ref="menu">
+  <div
+    @click="toggleMenu"
+    @mousemove="activateMouseFollow"
+    @mouseleave="resetMouseFollow"
+    class="menu-toggle"
+    ref="menu"
+  >
     <div class="bar" ref="bar1"></div>
     <div class="bar" ref="bar2"></div>
     <div class="bar" ref="bar3"></div>
@@ -15,6 +21,7 @@
 <script setup lang="ts">
 import { gsap } from 'gsap';
 import { ref } from 'vue';
+import { useMouseFollow } from '../composables/useMouseFollow';
 
 const menu = ref(null);
 
@@ -23,6 +30,8 @@ const nav = ref(null);
 const bar1 = ref(null);
 const bar2 = ref(null);
 const bar3 = ref(null);
+
+const { activateMouseFollow, resetMouseFollow } = useMouseFollow(menu, 40);
 
 const isMenuVisible = ref(false);
 
@@ -233,14 +242,14 @@ a:hover {
 
 .menu-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 5rem;
+  height: 6rem;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--primary);

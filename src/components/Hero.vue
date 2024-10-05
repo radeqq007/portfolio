@@ -2,12 +2,14 @@
   <div class="hero">
     <img
       src="/images/me.webp"
-      :style="{ transform: imgTransform }"
       alt=""
+      @mousemove="imgMouseFollow"
+      @mouseleave="imgResetMouseFollow"
       ref="img"
     />
 
     <svg
+      ref="header"
       id="animatedText"
       viewBox="0 0 1200 300"
       xmlns="http://www.w3.org/2000/svg"
@@ -28,10 +30,10 @@
 </template>
 
 <script setup lang="ts">
-import { useMouseInElement } from '@vueuse/core';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import { computed, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import { useMouseFollow } from '../composables/useMouseFollow';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -85,26 +87,12 @@ onMounted(() => {
 });
 
 const img = ref(null);
-const { elementX, elementY, isOutside, elementHeight, elementWidth } =
-  useMouseInElement(img);
+const header = ref(null);
 
-const imgTransform = computed(() => {
-  const maxRotation: number = 2;
-
-  const rotationX = (
-    maxRotation / 2 -
-    (elementY.value / elementHeight.value) * maxRotation
-  ).toFixed(2);
-
-  const rotationY = (
-    (elementX.value / elementWidth.value) * maxRotation -
-    maxRotation / 2
-  ).toFixed(2);
-
-  return isOutside.value
-    ? ''
-    : `perspective(${elementWidth.value}px) rotateX(${rotationX}deg)  rotateY(${rotationY}deg)`;
-});
+const {
+  activateMouseFollow: imgMouseFollow,
+  resetMouseFollow: imgResetMouseFollow,
+} = useMouseFollow(img, 10);
 </script>
 
 <style scoped>
