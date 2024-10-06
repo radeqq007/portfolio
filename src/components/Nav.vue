@@ -31,7 +31,7 @@ const bar1 = ref(null);
 const bar2 = ref(null);
 const bar3 = ref(null);
 
-const { activateMouseFollow, resetMouseFollow } = useMouseFollow(menu, 40);
+const { activateMouseFollow, resetMouseFollow } = useMouseFollow(menu, 40, 5);
 
 const isMenuVisible = ref(false);
 
