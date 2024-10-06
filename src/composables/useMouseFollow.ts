@@ -34,7 +34,7 @@ export const useMouseFollow = (
       ease: 'power4.out',
     });
 
-    if (childrenFollowStrength) {
+    if (childrenFollowStrength != null) {
       const newChildrenX =
         ((e.clientX - elementX.value) / elementWidth.value - 0.5) *
         childrenFollowStrength;
