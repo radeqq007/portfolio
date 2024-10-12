@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useMouseFollow } from '../composables/useMouseFollow';
 
 const menu = ref(null);
@@ -34,163 +34,85 @@ const bar3 = ref(null);
 const { activateMouseFollow, resetMouseFollow } = useMouseFollow(menu, 40, 5);
 
 const isMenuVisible = ref(false);
-
-const toggleMenu = () => {
+const tl = gsap.timeline({ reversed: true, paused: true });
+onMounted(() => {
   const duration: number = 0.6;
-  const tl = gsap.timeline({});
+  tl
+    // .from(
+    //   bar1.value, {
+    //     rotate: '0deg',
+    //     top: '30%',
+    //   }
+    // )
+    // .from (
+    //   bar2.value, {
+    //     opacity: 1,
+    //     width: '60%',
+    //   }
+    // )
+    // .from(
+    //   bar3.value, {
 
-  if (!isMenuVisible.value) {
-    tl.to(
+    //     rotate: '0deg',
+    //     bottom: '30%',
+    //   }
+    // )
+    // .from(nav.value, {
+    //   height: '0vh',
+    //   opacity: 0.9,
+    // })
+
+    .to(
       bar1.value,
       {
-        duration: 0.2,
-        top: '47.5%', // For whatever reason 50% is too much
-        ease: 'power3.out',
-      },
-      '0'
-    )
-      .to(
-        bar3.value,
-        {
-          duration: 0.5,
-          bottom: '47.5%', // For whatever reason 50% is too much
-          ease: 'power3.out',
-        },
-        '0'
-      )
-
-      .to(
-        bar1.value,
-        {
-          duration: duration,
-          transform: 'rotate(45deg)',
-          backgroundColor: 'rgb(255, 56, 182)',
-          ease: 'power3.out',
-        },
-        '0.2'
-      )
-
-      .to(
-        bar2.value,
-        {
-          duration: duration,
-          opacity: 0,
-          ease: 'power3.out',
-        },
-        '0'
-      )
-
-      .to(
-        bar3.value,
-        {
-          duration: duration,
-          backgroundColor: 'rgb(255, 56, 182)',
-          transform: 'rotate(-45deg)',
-          ease: 'power3.out',
-        },
-        '0.2'
-      )
-
-      .to(
-        '.menu-toggle',
-        {
-          duration: duration,
-        },
-        '0'
-      )
-
-      .to(
-        nav.value,
-        {
-          duration: 0.4,
-          height: '100vh',
-          top: '0',
-          borderRadius: '0',
-          ease: 'power3.out',
-        },
-        '0'
-      )
-
-      .to(
-        '.menu-toggle',
-        {
-          backgroundColor: 'rgb(14, 13, 18)',
-          duration: duration,
-        },
-        '0'
-      );
-  } else {
-    tl.to(
-      bar1.value,
-      {
+        rotate: '45deg',
         duration: duration,
-        transform: 'rotate(0)',
-
-        backgroundColor: 'rgb(14, 13, 18)',
-        ease: 'power3.out',
+        top: '47.5%',
+        ease: 'back.out',
       },
       '0'
     )
+    .to(
+      bar3.value,
+      {
+        rotate: '-45deg',
+        duration: duration,
+        bottom: '47.5%',
+        ease: 'back.out',
+      },
+      '<'
+    )
+    .to(
+      bar2.value,
+      {
+        opacity: 0,
+        width: 0,
+      },
+      '<'
+    )
+    .to(
+      nav.value,
+      {
+        height: '100vh',
+        opacity: 1,
+      },
+      '<'
+    );
+});
+const toggleMenu = () => {
+  // tl.reversed() ? tl.play() : tl.reverse(0)
 
-      .to(
-        bar3.value,
-        {
-          duration: duration,
-          transform: 'rotate(0)',
-          backgroundColor: 'rgb(14, 13, 18)',
-          ease: 'power3.out',
-        },
-        '0'
-      )
+  // if (tl.reversed()) {
+  //   tl.play()
 
-      .to(
-        bar1.value,
-        {
-          duration: 0.4,
-          top: '30%',
-        },
-        '0.2'
-      )
+  //   console.log('play');
+  // } else {
+  //   tl.reverse(0)
+  //   console.log('reverse');
+  // }
 
-      .to(
-        bar3.value,
-        {
-          duration: 0.4,
-          bottom: '30%',
-        },
-        '0.2'
-      )
-
-      .to(
-        bar2.value,
-        {
-          duration: duration,
-          opacity: 1,
-          ease: 'power3.out',
-        },
-        '0'
-      )
-
-      .to(
-        '.menu-toggle',
-        {
-          backgroundColor: 'rgb(255, 56, 182)',
-          duration: duration,
-        },
-        '0'
-      )
-
-      .to(
-        nav.value,
-        {
-          duration: 0.2,
-          height: '0',
-          top: '-10%',
-          ease: 'power3.in',
-        },
-        '0'
-      );
-  }
+  tl.reversed() ? tl.play() : tl.reverse();
+  console.log(tl.reversed());
 
   isMenuVisible.value = !isMenuVisible.value;
 };
