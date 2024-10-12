@@ -34,7 +34,6 @@ import ProjectCard from './ProjectCard.vue';
   padding: 5%;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
   width: 75%;
   margin: auto;
 }
