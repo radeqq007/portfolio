@@ -4,6 +4,7 @@
     <Hero />
     <About />
     <Skills />
+    <Works />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import About from './components/About.vue';
 import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
 import Skills from './components/Skills.vue';
+import Works from './components/Works.vue';
 
 // h2 hover effect
 onMounted(() => {
