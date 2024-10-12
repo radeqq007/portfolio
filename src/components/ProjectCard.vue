@@ -122,4 +122,25 @@ a {
 .tech {
   height: 4rem;
 }
+
+@media screen and (max-width: 600px) {
+  .project {
+    width: 100%;
+    grid-template-rows: 10% 1fr 1fr 2fr;
+  }
+
+  .img::before {
+    background: linear-gradient(
+      0deg,
+      color-mix(in srgb, black 60%, transparent) 50%,
+      transparent 100%
+    );
+  }
+  h3 {
+    font-weight: 600;
+  }
+  p {
+    font-weight: 500;
+  }
+}
 </style>
