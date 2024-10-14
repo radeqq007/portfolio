@@ -17,6 +17,7 @@
         imgSrc="images/portfolio.png"
         :stack="[
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
           'svgs/gsap.svg',
         ]"
         repo="https://github.com/radeqq007/portfolio"
