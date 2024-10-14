@@ -22,6 +22,16 @@
         ]"
         repo="https://github.com/radeqq007/portfolio"
       />
+      <ProjectCard
+        title="Github stats"
+        desc="Get your github stats: most used languages, followers, most starred repos etc."
+        imgSrc="images/github-stats.png"
+        :stack="[
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
+          'svgs/chartjs.svg',
+        ]"
+        repo="https://github.com/radeqq007/github-stats"
+      />
     </div>
   </div>
 </template>
