@@ -39,7 +39,7 @@ const props = defineProps({
 <style scoped>
 .project {
   position: relative;
-  height: 20rem;
+  height: 22rem;
   width: 48%;
   border: 2px solid color-mix(in srgb, white 40%, black);
 
@@ -59,7 +59,7 @@ const props = defineProps({
 
 .img > img {
   max-width: 100%;
-  height: 20rem;
+  height: 22rem;
   object-fit: cover;
 }
 
@@ -107,8 +107,8 @@ a {
 
   border-top: 1px solid color-mix(in srgb, white 40%, transparent);
   border-radius: 20px 20px 0 0;
-  padding: 0.1rem;
-  padding-inline: 0.6rem;
+  padding: 0.4rem;
+  padding-inline: 1rem;
   display: flex;
   justify-content: left;
   gap: 20px;
