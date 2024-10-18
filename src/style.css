@@ -9,9 +9,25 @@ html {
 }
 
 body {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 6%, var(--bg) 8%);
+  --color: color-mix(in srgb, var(--bg) 90%, white);
+  --gap: 5em;
+  --line: 2px;
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+
   background-position: 0% 0%;
-  background-size: 4vmin 4vmin;
+  background-size: var(--gap) var(--gap);
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
