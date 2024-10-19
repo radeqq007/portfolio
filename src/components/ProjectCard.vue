@@ -58,7 +58,7 @@ const props = defineProps({
 }
 
 .img > img {
-  max-width: 100%;
+  min-width: 100%;
   height: 22rem;
   object-fit: cover;
 }
