@@ -100,17 +100,6 @@ onMounted(() => {
     );
 });
 const toggleMenu = () => {
-  // tl.reversed() ? tl.play() : tl.reverse(0)
-
-  // if (tl.reversed()) {
-  //   tl.play()
-
-  //   console.log('play');
-  // } else {
-  //   tl.reverse(0)
-  //   console.log('reverse');
-  // }
-
   tl.reversed() ? tl.play() : tl.reverse();
   console.log(tl.reversed());
 
