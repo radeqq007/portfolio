@@ -101,7 +101,6 @@ onMounted(() => {
 });
 const toggleMenu = () => {
   tl.reversed() ? tl.play() : tl.reverse();
-  console.log(tl.reversed());
 
   isMenuVisible.value = !isMenuVisible.value;
 };
