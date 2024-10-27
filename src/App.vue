@@ -5,6 +5,7 @@
     <About />
     <Skills />
     <Works />
+    <Footer />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import gsap from 'gsap';
 import SplitType from 'split-type';
 import { onMounted } from 'vue';
 import About from './components/About.vue';
+import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
 import Skills from './components/Skills.vue';
