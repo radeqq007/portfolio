@@ -37,41 +37,16 @@ const isMenuVisible = ref(false);
 const tl = gsap.timeline({ reversed: true, paused: true });
 onMounted(() => {
   const duration: number = 0.6;
-  tl
-    // .from(
-    //   bar1.value, {
-    //     rotate: '0deg',
-    //     top: '30%',
-    //   }
-    // )
-    // .from (
-    //   bar2.value, {
-    //     opacity: 1,
-    //     width: '60%',
-    //   }
-    // )
-    // .from(
-    //   bar3.value, {
-
-    //     rotate: '0deg',
-    //     bottom: '30%',
-    //   }
-    // )
-    // .from(nav.value, {
-    //   height: '0vh',
-    //   opacity: 0.9,
-    // })
-
-    .to(
-      bar1.value,
-      {
-        rotate: '45deg',
-        duration: duration,
-        top: '47.5%',
-        ease: 'back.out',
-      },
-      '0'
-    )
+  tl.to(
+    bar1.value,
+    {
+      rotate: '45deg',
+      duration: duration,
+      top: '47.5%',
+      ease: 'back.out',
+    },
+    '0'
+  )
     .to(
       bar3.value,
       {
