@@ -179,4 +179,12 @@ a:hover {
 .bar:nth-of-type(3) {
   bottom: 30%;
 }
+
+@media screen and (max-width: 600px) {
+  .menu-toggle {
+    top: 10px;
+    right: 10px;
+    height: 5.2rem;
+  }
+}
 </style>
