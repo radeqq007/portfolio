@@ -8,8 +8,8 @@
       <p>
         My journey with programming started about three years ago with python,
         but javascript was my first ever language I mastered. Nowadays, I'm
-        mostly comfortable with Go, particularly on backend development.
-        However, I'm open to learning new languages and technologies.
+        mostly comfortable working on frontend development, particularly with
+        Vue.js. However, I'm open to learning new languages and technologies.
       </p>
       <p>
         Outside of coding, I also enjoy reading, weightlifting, running and
