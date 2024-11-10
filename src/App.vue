@@ -52,7 +52,7 @@ const lenis = new Lenis({
   easing: t => Math.min(1, 100.1 - Math.pow(2, -10 * t)),
 });
 
-function raf(time) {
+function raf(time: number) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
