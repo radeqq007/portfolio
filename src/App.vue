@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 import gsap from 'gsap';
+import Lenis from 'lenis';
 import SplitType from 'split-type';
 import { onMounted } from 'vue';
 import About from './components/About.vue';
@@ -44,6 +45,18 @@ onMounted(() => {
     });
   }
 });
+
+// Smooth scroll
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: t => Math.min(1, 100.1 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 </script>
 
 <style>
