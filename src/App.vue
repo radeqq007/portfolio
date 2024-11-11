@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import gsap from 'gsap';
 import Lenis from 'lenis';
 import SplitType from 'split-type';
 import { onMounted } from 'vue';
