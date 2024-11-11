@@ -20,28 +20,23 @@ import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
 import Skills from './components/Skills.vue';
 import Works from './components/Works.vue';
+import { useMouseFollow } from './composables/useMouseFollow';
+import { ref, Ref } from 'vue';
 
 // h2 hover effect
 onMounted(() => {
   const headersText = SplitType.create('h2');
   if (headersText.chars != null) {
     headersText.chars.forEach(char => {
-      const hoverTimeline = gsap.timeline({ paused: true });
-      hoverTimeline
-        .to(char, {
-          scale: 1.1,
-          duration: 0.5,
-          ease: 'back.out',
-        })
-        .to(char, {
-          scale: 1,
-          duration: 1,
-          ease: 'back.out',
-        });
+      const charRef: Ref<HTMLElement | null> = ref(char);
 
-      char.addEventListener('mouseenter', () => {
-        hoverTimeline.restart();
-      });
+      const { activateMouseFollow, resetMouseFollow } = useMouseFollow(
+        charRef,
+        20
+      );
+
+      char.addEventListener('mousemove', activateMouseFollow);
+      char.addEventListener('mouseleave', resetMouseFollow);
     });
   }
 });
