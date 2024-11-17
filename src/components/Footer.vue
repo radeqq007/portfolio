@@ -9,7 +9,7 @@
 footer {
   box-sizing: border-box;
   height: 4rem;
-  width: 100vw;
+  width: 100%;
   padding-inline: 20vw;
   display: flex;
   align-items: center;
