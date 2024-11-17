@@ -25,7 +25,7 @@
         <tspan x="50%" dy="0.8em">Kaczmarczyk</tspan>
       </text>
     </svg>
-    <p>A passionate <span id="typewriter"></span><span id="cursor"></span></p>
+    <p>A passionate <span id="typewriter"></span></p>
   </div>
 </template>
 
