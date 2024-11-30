@@ -2,7 +2,9 @@
   <div class="project">
     <img :src="imgSrc" alt="Project preview" class="preview" />
     <div class="info">
-      <h3>{{ title }}</h3>
+      <h3>
+        <a :href="repo" target="_blank">{{ title }}</a>
+      </h3>
       <p>{{ desc }}</p>
       <div class="stack">
         <h4>Tech stack:</h4>
@@ -74,6 +76,11 @@ p {
   img {
     max-height: 4rem;
   }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {
