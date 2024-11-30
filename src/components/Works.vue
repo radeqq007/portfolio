@@ -51,8 +51,7 @@ import ProjectCard from './ProjectCard.vue';
 
 .projects {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 5rem;
 }
 </style>
