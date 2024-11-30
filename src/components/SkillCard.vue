@@ -22,17 +22,6 @@ const card: Ref<HTMLElement | null> = ref<HTMLElement | null>(null);
 
 onMounted(() => {
   if (card.value) {
-    gsap.to(card.value, {
-      scale: 1,
-      opacity: 1,
-      duration: 0.5,
-      ease: 'back.out',
-      scrollTrigger: {
-        trigger: card.value,
-        start: 'top bottom',
-      },
-    });
-
     card.value.addEventListener('mouseenter', () => {
       gsap.to(card.value, {
         filter: 'grayscale(0)',
@@ -58,8 +47,6 @@ onMounted(() => {
 
 <style scoped>
 .card {
-  scale: 0.95;
-  opacity: 0;
   padding: 0.1rem;
   display: flex;
   justify-content: space-evenly;
@@ -84,7 +71,7 @@ p {
   font-size: 3rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .card {
     filter: grayscale(0);
   }
