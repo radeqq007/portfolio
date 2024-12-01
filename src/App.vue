@@ -10,9 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import Lenis from 'lenis';
 import SplitType from 'split-type';
-import { onMounted } from 'vue';
+import { onMounted, ref, Ref } from 'vue';
 import About from './components/About.vue';
 import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
@@ -20,7 +19,6 @@ import Nav from './components/Nav.vue';
 import Skills from './components/Skills.vue';
 import Works from './components/Works.vue';
 import { useMouseFollow } from './composables/useMouseFollow';
-import { ref, Ref } from 'vue';
 
 // h2 hover effect
 onMounted(() => {
@@ -39,18 +37,6 @@ onMounted(() => {
     });
   }
 });
-
-// Smooth scroll
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: t => Math.min(1, 100.1 - Math.pow(2, -10 * t)),
-});
-
-function raf(time: number) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
 </script>
 
 <style>

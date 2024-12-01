@@ -13,7 +13,6 @@
   "dependencies": {
     "@vueuse/core": "^11.0.3",
     "gh-pages": "^6.1.1",
-    "lenis": "^1.1.16",
     "split-type": "^0.3.4",
     "vue": "^3.4.37"
   },
