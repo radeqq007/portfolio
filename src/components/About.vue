@@ -1,5 +1,5 @@
 <template>
-  <div class="about" id="about">
+  <div class="about section" id="about">
     <div class="title">
       <h2>About me</h2>
     </div>
@@ -22,13 +22,6 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .title {
   display: flex;
   gap: 2rem;

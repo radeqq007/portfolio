@@ -41,14 +41,6 @@ import ProjectCard from './ProjectCard.vue';
 </script>
 
 <style scoped>
-.section {
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: auto;
-}
-
 .projects {
   display: flex;
   flex-direction: column;

@@ -50,6 +50,14 @@ h2 {
   cursor: default;
 }
 
+.section {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+
 p {
   font-weight: 300;
 }

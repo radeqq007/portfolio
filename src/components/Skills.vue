@@ -1,5 +1,5 @@
 <template>
-  <div class="skills" id="skills">
+  <div class="skills section" id="skills">
     <h2>Skills</h2>
     <div class="skill-grid">
       <skillCard
@@ -59,14 +59,6 @@ import skillCard from './SkillCard.vue';
 </script>
 
 <style>
-.skills {
-  margin: auto;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .skill-grid {
   width: 100%;
   display: grid;
