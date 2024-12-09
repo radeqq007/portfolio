@@ -5,6 +5,7 @@
     <About />
     <Skills />
     <Works />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -13,6 +14,7 @@
 import SplitType from 'split-type';
 import { onMounted, ref, Ref } from 'vue';
 import About from './components/About.vue';
+import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
 import Nav from './components/Nav.vue';
