@@ -29,10 +29,6 @@
   align-items: center;
 }
 
-.content,
-.title {
-  width: 75%;
-}
 p {
   font-size: 2rem;
   line-height: 1.2;
