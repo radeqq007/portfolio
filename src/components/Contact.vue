@@ -27,6 +27,7 @@
 .links {
   margin-block: 2rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 
