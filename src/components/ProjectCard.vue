@@ -105,5 +105,9 @@ a:hover::before {
   .project {
     grid-template-columns: 1fr;
   }
+
+  h3 {
+    font-size: 2.6rem;
+  }
 }
 </style>
