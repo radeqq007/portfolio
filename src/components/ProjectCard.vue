@@ -59,6 +59,7 @@ h3 {
 }
 
 p {
+  margin-block: 0.2rem 0;
   font-size: 1.4rem;
   line-height: 1.4;
 }
