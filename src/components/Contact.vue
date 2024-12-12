@@ -40,4 +40,10 @@ img {
   max-height: 4rem;
   filter: brightness(100);
 }
+
+@media screen and (max-width: 600px) {
+  .links {
+    justify-content: center;
+  }
+}
 </style>
