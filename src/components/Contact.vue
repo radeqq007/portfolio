@@ -14,7 +14,7 @@
         <img src="/svgs/github.svg" alt="github" />
       </a>
 
-      <a href="x.com/" target="_blank">
+      <a href="https://x.com/wcale_nie_radek" target="_blank">
         <img src="/svgs/x.svg" alt="x" />
       </a>
     </div>
