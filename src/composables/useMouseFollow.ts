@@ -2,6 +2,10 @@ import { useElementBounding } from '@vueuse/core';
 import { gsap } from 'gsap';
 import { Ref } from 'vue';
 
+const isMobile = () => {
+  return window.matchMedia('(max-width: 768px)').matches; // Check for mobile devices
+};
+
 export const useMouseFollow = (
   elementRef: Ref<HTMLElement | null>,
   followStrength: number,
@@ -13,10 +17,6 @@ export const useMouseFollow = (
     width: elementWidth,
     height: elementHeight,
   } = useElementBounding(elementRef);
-
-  const isMobile = () => {
-    return window.matchMedia('(max-width: 768px)').matches; // Check for mobile devices
-  };
 
   const activateMouseFollow = (e: MouseEvent) => {
     if (isMobile()) return;
