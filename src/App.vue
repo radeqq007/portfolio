@@ -67,6 +67,7 @@ p {
   h2 {
     font-weight: 500;
     font-size: 3.4rem;
+    text-align: center;
   }
 }
 </style>
