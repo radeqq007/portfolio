@@ -1,7 +1,7 @@
 <template>
   <footer>
     <span>Designed and Developed by <span class="name">Radosław Kaczmarczyk</span></span>
-    <span>&#169 2025</span>
+    <span>&#169; 2025</span>
   </footer>
 </template>
 
