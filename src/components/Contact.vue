@@ -6,7 +6,7 @@
         <img src="/svgs/email.svg" alt="email" />
       </a>
 
-      <a href="https://www.instagram.com/radeqq__/" target="_blank">
+      <a href="https://www.instagram.com/your.iron.lung/" target="_blank">
         <img src="/svgs/instagram.svg" alt="instagram" />
       </a>
 
