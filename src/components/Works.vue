@@ -28,6 +28,7 @@
         imgSrc="images/github-stats.webp"
         :stack="[
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
           'svgs/chartjs.svg',
         ]"
         repo="https://github.com/radeqq007/github-stats"
