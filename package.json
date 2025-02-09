@@ -16,7 +16,8 @@
     "gh-pages": "^6.1.1",
     "split-type": "^0.3.4",
     "tailwindcss": "^4.0.5",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
