@@ -11,14 +11,15 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.5",
     "@vueuse/core": "^11.0.3",
     "gh-pages": "^6.1.1",
     "split-type": "^0.3.4",
+    "tailwindcss": "^4.0.5",
     "vue": "^3.4.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
-    "gsap": "^3.12.5",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",
     "vue-tsc": "^2.0.29"
