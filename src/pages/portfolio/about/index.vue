@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center flex-col gap-20">
     <h2 class="text-8xl font-frederica text-center">About me</h2>
-    <div class="w-2/3 text-3xl flex flex-col gap-10">
+    <div class="w-2/3 text-3xl flex flex-col gap-10 font-crimson">
       <p>Born in Poland, 17 years old software developer and student.</p>
       <p>
         My journey with programming started about three years ago with python,
