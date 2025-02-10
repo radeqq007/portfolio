@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --color-primary: #1a1a1a;
   --color-secondary: #fff9f6;
+  --font-frederica: "Fredericka the Great", serif;
 }
