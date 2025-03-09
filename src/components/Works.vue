@@ -3,6 +3,15 @@
     <h2>Works</h2>
     <div class="projects">
       <ProjectCard
+        title="Sunbird programmng language"
+        desc="Sunbird is a simple, interpreted language."
+        imgSrc="images/sunbird.png"
+        :stack="[
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg',
+        ]"
+        repo="https://github.com/sunbird-lang"
+      />
+      <ProjectCard
         title="Image to ascii"
         desc="Allows you to select file and convert it to ascii art. This way I learned to work with Pillow python library."
         imgSrc="images/img-to-ascii.webp"
