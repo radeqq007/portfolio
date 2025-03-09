@@ -5,13 +5,12 @@
       <h3>
         <a :href="repo" target="_blank">{{ title }}</a>
       </h3>
-      <p>{{ desc }}</p>
       <div class="stack">
-        <h4>Tech stack:</h4>
-        <span>
-          <img v-for="(src, key) in stack" :src="src" :alt="src" :key="key" />
+        <span v-for="(tech, key) in stack" :key="key">
+          {{ tech }}
         </span>
       </div>
+      <p>{{ desc }}</p>
     </div>
   </div>
 </template>
@@ -66,17 +65,15 @@ p {
 
 .stack {
   display: flex;
-  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0.5rem 0;
+}
 
-  h4 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin: 0;
-  }
-
-  img {
-    max-height: 4rem;
-  }
+.stack span {
+  background: color-mix(in srgb, var(--primary), transparent 60%);
+  padding: 0.2rem 0.8rem;
+  border: var(--primary) 1px solid;
+  border-radius: 0.4rem;
 }
 
 a {
