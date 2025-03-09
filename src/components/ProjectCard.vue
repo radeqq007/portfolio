@@ -80,18 +80,19 @@ a {
   color: inherit;
   text-decoration: none;
   position: relative;
+  background-image: linear-gradient(
+    to right,
+    var(--primary),
+    color-mix(in srgb, var(--primary), blue 40%)
+  );
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s;
 }
 
-a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary);
-  transform: scaleX(0);
-  transition: transform 0.1s ease-in-out;
+a:hover {
+  background-size: 100% 2px;
 }
 
 a:hover::before {
