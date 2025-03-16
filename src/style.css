@@ -1,5 +1,5 @@
 :root {
-  --bg: rgb(14, 13, 18);
+  --bg: #09080c;
   --text: rgb(218, 218, 218);
   --primary: rgb(255, 56, 182);
 }
@@ -9,38 +9,10 @@ html {
 }
 
 body {
-  --color: color-mix(in srgb, var(--bg) 90%, white);
-  --gap: 5em;
-  --line: 2px;
-
-  background-image: linear-gradient(
-      -90deg,
-      transparent calc(var(--gap) - var(--line)),
-      var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    ),
-    linear-gradient(
-      0deg,
-      transparent calc(var(--gap) - var(--line)),
-      var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    );
-
-  background-position: 0% 0%;
-  background-size: var(--gap) var(--gap);
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
   font-family: 'Raleway', sans-serif;
 
   animation: bg-animation 300s infinite linear;
-}
-
-@keyframes bg-animation {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -100% -100%;
-  }
 }
