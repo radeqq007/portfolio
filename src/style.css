@@ -13,6 +13,4 @@ body {
   color: var(--text);
   margin: 0;
   font-family: 'Raleway', sans-serif;
-
-  animation: bg-animation 300s infinite linear;
 }
