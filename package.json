@@ -11,9 +11,11 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tsparticles/vue3": "^3.0.1",
     "@vueuse/core": "^11.0.3",
     "gh-pages": "^6.1.1",
     "split-type": "^0.3.4",
+    "tsparticles": "^3.8.1",
     "vue": "^3.4.37"
   },
   "devDependencies": {
