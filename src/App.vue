@@ -11,7 +11,6 @@
     <div class="bg">
       <vue-particles
         id="tsparticles"
-        @particles-loaded="particlesLoaded"
         :options="{
           background: {
             color: {
