@@ -94,7 +94,6 @@ import Nav from './components/Nav.vue';
 import Skills from './components/Skills.vue';
 import Works from './components/Works.vue';
 import { useMouseFollow } from './composables/useMouseFollow';
-import Particles from '@tsparticles/vue3';
 
 // h2 hover effect
 onMounted(() => {
