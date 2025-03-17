@@ -4,7 +4,7 @@
       <h2>About me</h2>
     </div>
     <div class="content">
-      <p>Born in Poland, 17 years old software developer and student.</p>
+      <p>Born in Poland, 18 years old software developer and student.</p>
       <p>
         My journey with programming started about three years ago with python,
         but javascript was first language I mastered. Nowadays, I'm mostly
