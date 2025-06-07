@@ -7,7 +7,7 @@
         desc="Sunbird is a simple, interpreted language."
         imgSrc="images/sunbird.png"
         :stack="['Go']"
-        repo="https://github.com/sunbird-lang"
+        repo="https://github.com/radeqq007/sunbird"
       />
       <ProjectCard
         title="Image to ascii"
