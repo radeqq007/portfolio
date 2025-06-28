@@ -10,6 +10,13 @@
         repo="https://github.com/radeqq007/sunbird"
       />
       <ProjectCard
+        title="oBerry"
+        desc="oBerry is a lightweight and modern jQuery alternative designed to simplyfy the manipulation of HTML elements, handling user interactions and biding reactive data to HTML content."
+        imgSrc="images/oberry.webp"
+        :stack="['Typescript']"
+        repo="https://github.com/radeqq007/oBerry"
+      />
+      <ProjectCard
         title="Image to ascii"
         desc="Allows you to select file and convert it to ascii art. This way I learned to work with Pillow python library."
         imgSrc="images/img-to-ascii.webp"
