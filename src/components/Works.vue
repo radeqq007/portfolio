@@ -17,13 +17,6 @@
         repo="https://github.com/radeqq007/oBerry"
       />
       <ProjectCard
-        title="Image to ascii"
-        desc="Allows you to select file and convert it to ascii art. This way I learned to work with Pillow python library."
-        imgSrc="images/img-to-ascii.webp"
-        :stack="['Python']"
-        repo="https://github.com/radeqq007/image-to-ascii"
-      />
-      <ProjectCard
         title="This portfolio!"
         desc="This portfolio is more of a playground for me. I packed everything with animations while learning GSAP and vue.js."
         imgSrc="images/portfolio.webp"
