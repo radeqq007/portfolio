@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import About from './pages/About';
+import Work from './pages/Work';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/portfolio/" element={<About />} />
+              <Route path="/portfolio/work" element={<Work />} />
             </Routes>
           </Router>
         </div>
