@@ -1,17 +1,14 @@
-import sunbird from '../assets/imgs/sunbird.png';
-
 type Project = {
   name: string;
   description: string;
-  img: string;
   stack: string[];
 };
 
 const projects: Project[] = [
   {
     name: 'Sunbird',
-    description: 'Sunbird is a simple, interpreted language.',
-    img: sunbird,
+    description:
+      'Sunbird is a simple, interpreted, dynamically typed language.',
     stack: ['Go'],
   },
 ];
@@ -20,29 +17,22 @@ const Work = () => {
   return (
     <div className="grid grid-cols-2 place-items-center">
       {projects.map(project => (
-        <div className="relative w-6/7 h-60 border-3 border-primary rounded-2xl flex items-end">
-          <div className="z-10 px-4 py-2 font-lekton flex flex-col gap-3">
-            <span>
-              <h1 className="text-primary text-4xl font-bold">
-                {project.name}
-              </h1>
-              <p className="text-secondary text-xl">{project.description}</p>
-            </span>
-            <div className="flex gap-1">
-              {project.stack.map(tool => (
-                <span className="bg-primary rounded-full px-3 font-baloo">
-                  {tool}
-                </span>
-              ))}
-            </div>
+        <div className="relative w-4/5 h-60 border-3 border-primary bg-bg overflow-hidden rounded-2xl">
+          <div className="h-12 px-4 w-full bg-primary flex items-center">
+            <h2 className="font-baloo font-bold text-bg text-3xl">
+              {project.name}
+            </h2>
           </div>
-
-          <div className="absolute top-0 left-0 right-0 bottom-0 z-1 rounded-xl bg-gradient-to-t from-black to-black/0"></div>
-          <img
-            src={project.img}
-            alt={project.name}
-            className="absolute w-full h-full top-0 rounded-xl -z-10"
-          />
+          <div className="font-lekton text-secondary px-4 py-3 text-xl flex flex-col justify-between">
+            <p>{project.description}</p>
+          </div>
+          <span className="absolute bottom-2 left-2 font-baloo font-semibold text-lg">
+            {project.stack.map(tool => (
+              <span className="bg-primary text-bg px-8 rounded-full">
+                {tool}
+              </span>
+            ))}
+          </span>
         </div>
       ))}
     </div>
