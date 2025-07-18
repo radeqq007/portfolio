@@ -11,6 +11,18 @@ const projects: Project[] = [
       'Sunbird is a simple, interpreted, dynamically typed language.',
     stack: ['Go'],
   },
+  {
+    name: 'oBerry',
+    description:
+      'oBerry is a modern jQuery alternative designed to simplify the DOM manipulation and binding reactive data to HTML content.',
+    stack: ['Typescript'],
+  },
+  {
+    name: 'Github Stats',
+    description:
+      'Get your github stats: most used languages, followers, most starred repos etc.',
+    stack: ['Vue.js', 'Tailwindcss', 'Chart.js'],
+  },
 ];
 
 const Work = () => {
