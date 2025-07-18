@@ -27,10 +27,10 @@ const projects: Project[] = [
 
 const Work = () => {
   return (
-    <div className="grid grid-cols-2 place-items-center">
+    <div className="grid grid-cols-2 place-items-center gap-10">
       {projects.map(project => (
         <div className="relative w-4/5 h-60 border-3 border-primary bg-bg overflow-hidden rounded-2xl">
-          <div className="h-12 px-4 w-full bg-primary flex items-center">
+          <div className="h-12 px-4 w-full bg-primary flex items-center ">
             <h2 className="font-baloo font-bold text-bg text-3xl">
               {project.name}
             </h2>
@@ -38,7 +38,7 @@ const Work = () => {
           <div className="font-lekton text-secondary px-4 py-3 text-xl flex flex-col justify-between">
             <p>{project.description}</p>
           </div>
-          <span className="absolute bottom-2 left-2 font-baloo font-semibold text-lg">
+          <span className="absolute bottom-2 left-2 font-baloo font-semibold text-lg flex gap-1">
             {project.stack.map(tool => (
               <span className="bg-primary text-bg px-8 rounded-full">
                 {tool}
