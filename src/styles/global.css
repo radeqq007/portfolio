@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 @import 'tailwindcss';
 
 @theme {
@@ -24,4 +26,5 @@
   --color-bg-yellow-dark: #ffccac;
 
   --font-pacifico: 'pacifico', sans-serif;
+  --font-roboto-mono: 'roboto mono', sans-serif;
 }
