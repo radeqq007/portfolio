@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -21,4 +22,6 @@
 
   --color-bg-orange-light: #ffdfcc;
   --color-bg-yellow-dark: #ffccac;
+
+  --font-pacifico: 'pacifico', sans-serif;
 }
