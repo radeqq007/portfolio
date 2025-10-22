@@ -1,3 +1,7 @@
+---
+import '../styles/global.css'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,7 +11,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Radosław Kaczmarczyk</title>
 	</head>
-	<body>
+	<body class="bg-bg-light dark:bg-bg-dark">
 		<slot />
 	</body>
 </html>
@@ -15,8 +19,6 @@
 <style>
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		margin: 1rem;
 	}
 </style>
