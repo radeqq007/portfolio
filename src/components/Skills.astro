@@ -1,0 +1,10 @@
+---
+const skills = ["Javascript", "Typescript", "html", "css", "Tailwind", "Vue.js", "React", "Go"]
+---
+
+<div class="bg-bg-green-light dark:bg-bg-green-dark rounded-4xl col-start-1 col-span-2 row-start-2 row-span-2 p-6">
+  <h2 class="text-text-primary text-5xl font-pacifico">Skills</h2>
+  <span class="flex flex-wrap gap-3 mt-5">
+    {skills.map(skill => <div class="bg-bg-light dark:bg-bg-dark text-text-secondary dark:text-bg-light px-5 py-2 rounded-xl font-roboto-mono">{skill}</div>)}
+  </span>
+</div>
