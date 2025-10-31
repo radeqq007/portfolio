@@ -4,27 +4,27 @@
 @import "tailwindcss";
 
 @theme {
-	--color-text-primary: #3b3836;
-	--color-text-secondary: #484848;
+  --color-text-primary: #3b3836;
+  --color-text-secondary: #484848;
 
-	--color-bg-light: #fffef6;
-	--color-bg-dark: #1b1b1b;
+  --color-bg-light: #fffef6;
+  --color-bg-dark: #1b1b1b;
 
-	--color-bg-purple-light: #dfc9fb;
-	--color-bg-purple-dark: #d2aeff;
+  --color-bg-purple-light: #dfc9fb;
+  --color-bg-purple-dark: #d2aeff;
 
-	--color-bg-green-light: #c9fbe4;
-	--color-bg-green-dark: #8fffcb;
+  --color-bg-green-light: #c9fbe4;
+  --color-bg-green-dark: #8fffcb;
 
-	--color-bg-blue-light: #bfe4ff;
-	--color-bg-blue-dark: #7bc8ff;
+  --color-bg-blue-light: #bfe4ff;
+  --color-bg-blue-dark: #7bc8ff;
 
-	--color-bg-yellow-light: #f4fbc9;
-	--color-bg-yellow-dark: #f4ffb8;
+  --color-bg-yellow-light: #f4fbc9;
+  --color-bg-yellow-dark: #f4ffb8;
 
-	--color-bg-orange-light: #ffdfcc;
-	--color-bg-orange-dark: #ffccac;
+  --color-bg-orange-light: #ffdfcc;
+  --color-bg-orange-dark: #ffccac;
 
-	--font-pacifico: "pacifico", sans-serif;
-	--font-roboto-mono: "roboto mono", sans-serif;
+  --font-pacifico: "pacifico", sans-serif;
+  --font-roboto-mono: "roboto mono", sans-serif;
 }
