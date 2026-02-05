@@ -1,11 +1,88 @@
 ---
+import oberry from "../assets/oberry.png";
+import sunbird from "../assets/sunbird.png";
+
+const projects = [
+  {
+    title: "oBerry",
+    description:
+      "oBerry is a lightweight and modern JQuery alternative designed to  simplify the manipulation of HTML elements, handling user interactions  and binding reactive data to HTML content.",
+    link: "https://github.com/radeqq007/oBerry",
+    image: oberry,
+  },
+  {
+    title: "Sunbird",
+    description:
+      "Sunbird is dynamically-typed (with optional type annotations), interpreted programming language that focuses on ease of use and clarity.",
+    link: "https://github.com/radeqq007/Sunbird",
+    image: sunbird,
+  },
+];
+
+const project = projects[0];
 ---
 
-<div class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative">
-  <h2 class="text-text-primary text-5xl font-pacifico">featured project</h2>
-  <span class="lg:block flex flex-col">
-    <p class="my-5 text-xl lg:w-1/2 text-text-secondary font-roboto-mono">oBerry is a lightweight jQuery alternative with modern features, such as built-in reactivity.</p>
-    <a href="https://github.com/radeqq007/oBerry" target="_blank" class="text-xl text-center lg:text-left text-text-primary font-roboto-mono">[source code]</a>
-    <img src="/portfolio/oberry.png" alt="oberry demo" class="h-full lg:float-right lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:max-w-1/2 object-scale-down"/>
+<div
+  class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative flex flex-col"
+>
+  <span class="w-full flex justify-between gap-4">
+    <span class="w-1/2">
+      <a id="link" href={project.link} target="_blank" class="block mb-4">
+        <h3
+          id="title"
+          class="font-bold mb-2 font-pacifico text-5xl text-text-primary"
+        >
+          {project.title}
+        </h3>
+      </a>
+      <p id="description" class="font-roboto-mono text-xl">
+        {project.description}
+      </p>
+    </span>
+    <img
+      id="image"
+      class="w-1/2 object-contain max-h-200"
+      src={project.image.src}
+      loading="lazy"
+      alt={project.title}
+    />
+  </span>
+  <span class="flex justify-center gap-2 absolute bottom-2 left-0 right-0">
+    {
+      projects.map((_, i) => (
+        <button
+          class="aspect-square w-5 rounded-full dark:bg-bg-orange-light hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer dot"
+          data-index={i}
+        />
+      ))
+    }
   </span>
 </div>
+
+<script is:inline define:vars={{ projects }}>
+  const titleEl = document.getElementById("title");
+  const descEl = document.getElementById("description");
+  const linkEl = document.getElementById("link");
+  const imgEl = document.getElementById("image");
+  const dots = document.querySelectorAll(".dot");
+
+  function updateProject(index) {
+    const project = projects[index];
+
+    // Update Content
+    titleEl.textContent = project.title;
+    descEl.textContent = project.description;
+    linkEl.href = project.link;
+    imgEl.src = project.image.src;
+    imgEl.alt = project.title;
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const index = dot.getAttribute("data-index");
+      updateProject(index);
+    });
+  });
+
+  updateProject(0);
+</script>
