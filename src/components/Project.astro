@@ -25,8 +25,8 @@ const project = projects[0];
 <div
   class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative flex flex-col"
 >
-  <span class="w-full flex justify-between gap-4">
-    <span class="w-1/2">
+  <span class="w-full flex md:flex-row flex-col justify-between gap-4">
+    <span class="md:w-1/2 w-full">
       <a id="link" href={project.link} target="_blank" class="block mb-4">
         <h3
           id="title"
@@ -41,7 +41,7 @@ const project = projects[0];
     </span>
     <img
       id="image"
-      class="w-1/2 object-contain max-h-200"
+      class="md:w-1/2 w-full object-contain max-h-200"
       src={project.image.src}
       loading="lazy"
       alt={project.title}
