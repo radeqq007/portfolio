@@ -25,6 +25,9 @@
   --color-bg-orange-light: #ffdfcc;
   --color-bg-orange-dark: #ffccac;
 
+  --color-orange-accent-light: #ffccac;
+  --color-orange-accent-dark: #ffdfcc;
+
   --font-pacifico: "pacifico", sans-serif;
   --font-roboto-mono: "roboto mono", sans-serif;
 }
