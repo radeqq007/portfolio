@@ -69,7 +69,17 @@ const project = projects[0];
   function updateProject(index) {
     const project = projects[index];
 
-    // Update Content
+    if (!document.startViewTransition) {
+      updateContent(project);
+      return;
+    }
+
+    document.startViewTransition(() => {
+      updateContent(project);
+    });
+  }
+
+  function updateContent(project) {
     titleEl.textContent = project.title;
     descEl.textContent = project.description;
     linkEl.href = project.link;
