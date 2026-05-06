@@ -1,8 +1,22 @@
 ---
-import oberry from "../assets/oberry.png";
+import oberry from "../assets/oBerry.svg";
 import sunbird from "../assets/sunbird.png";
+import duvet from "../assets/duvet.svg";
 
 const projects = [
+ {
+    title: "duvet",
+    description: "Duvet is a fast, keyboard-driven file explorer that lives entirely in your terminal. Browse directories, preview files with syntax highlighting, manage bookmarks, run shell commands, and see git status — all without leaving the terminal.",
+    link: "https://github.com/radeqq007/duvet",
+    image: duvet,
+  },
+  {
+    title: "oBerry",
+    description:
+      "oBerry is a lightweight and modern JQuery alternative designed to simplify the manipulation of HTML elements, handling user interactions and binding reactive data to HTML content.",
+    link: "https://github.com/radeqq007/oBerry",
+    image: oberry,
+  },
   {
     title: "Sunbird",
     description:
@@ -10,53 +24,32 @@ const projects = [
     link: "https://github.com/radeqq007/Sunbird",
     image: sunbird,
   },
-  {
-    title: "oBerry",
-    description:
-      "oBerry is a lightweight and modern JQuery alternative designed to  simplify the manipulation of HTML elements, handling user interactions  and binding reactive data to HTML content.",
-    link: "https://github.com/radeqq007/oBerry",
-    image: oberry,
-  },
-];
+ ];
 
 const project = projects[0];
 ---
 
 <div
-  class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative flex flex-col"
+  class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative flex flex-col gap-1 items-start"
 >
-  <span class="w-full flex md:flex-row flex-col justify-between gap-4">
-    <span class="md:w-1/2 w-full">
-      <a id="link" href={project.link} target="_blank" class="block mb-4">
-        <h3
-          id="title"
-          class="font-bold mb-2 font-pacifico text-5xl text-text-primary"
-        >
-          {project.title}
-        </h3>
-      </a>
-      <p id="description" class="font-roboto-mono text-xl">
-        {project.description}
-      </p>
-    </span>
-    <img
-      id="image"
-      class="md:w-1/2 w-full object-contain max-h-200"
-      src={project.image.src}
-      loading="lazy"
-      alt={project.title}
-    />
-  </span>
-  <span class="flex justify-center gap-2 absolute bottom-2 left-0 right-0">
+  <img src={project.image.src} alt={project.title} id="image" class="max-h-40 lg:max-h-2/5 object-contain mx-auto" />
+  <a id="link" target="_blank" href={project.link}>
+    <h3 id="title" class="font-pacifico text-4xl">
+      {project.title}
+    </h2>
+  </a>
+  <p id="description" class="font-roboto-mono text-xl">{project.description}</p>
+
+  <div class="flex justify-center gap-2 absolute bottom-2 left-0 right-0">
     {
       projects.map((_, i) => (
         <button
           class="aspect-square w-5 rounded-full dark:bg-orange-accent-dark bg-orange-accent-light hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer dot"
           data-index={i}
-        />
+        ></button>
       ))
     }
-  </span>
+  </div>
 </div>
 
 <script is:inline define:vars={{ projects }}>
