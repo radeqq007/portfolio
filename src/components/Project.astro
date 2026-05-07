@@ -46,7 +46,7 @@ const project = projects[0];
     {
       projects.map((_, i) => (
         <button
-        class="aspect-square w-5 rounded-full dark:bg-orange-accent-dark bg-orange-accent-light hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer dot"
+        class={`h-5 rounded-full dark:bg-orange-accent-dark bg-orange-accent-light hover:scale-[1.2] ease-in-out transition-transform transition-speed-300 cursor-pointer dot ${i === 0 ? "w-10" : "w-5"}`}
         data-index={i}
         ></button>
       ))
@@ -62,12 +62,13 @@ const project = projects[0];
   const dots = document.querySelectorAll(".dot");
   const content = document.getElementById("content");
 
-  let cur = 0;
+  let cur = -1;
 
   function updateProject(index) {
-    if (index === cur) return;
+    const targetIndex = parseInt(index);
+    if (targetIndex === cur) return;
 
-    const tl = window.gsap.timeline();
+    const tl = gsap.timeline();
     
     tl
       .to(content, {
@@ -75,8 +76,8 @@ const project = projects[0];
         scale: 0.98,
         duration: 0.2,
         onComplete: () => {
-          updateContent(projects[index]);
-          cur = index;
+          updateContent(projects[targetIndex]);
+          cur = targetIndex;
         },
       })
       .to(content, {
@@ -85,6 +86,12 @@ const project = projects[0];
         duration: 0.2,
       });
 
+    dots.forEach((dot, i) => {
+      gsap.to(dot, {
+        width: i === targetIndex ? 40 : 20,
+        duration: 0.3,
+      });
+    });
   }
 
   function updateContent(project) {
