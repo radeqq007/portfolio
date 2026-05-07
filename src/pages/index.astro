@@ -18,7 +18,10 @@ import Project from "../components/Project.astro";
 </Layout>
 
 <script>
-import { gsap } from "gsap";
+	import { gsap } from "gsap";
+
+	// This kinda sucks, maybe find a better way to do it later
+	window.gsap = gsap;
 
 	const main = document.querySelector("main");
 

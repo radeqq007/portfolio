@@ -4,7 +4,7 @@ import sunbird from "../assets/sunbird.png";
 import duvet from "../assets/duvet.svg";
 
 const projects = [
- {
+  {
     title: "duvet",
     description: "Duvet is a fast, keyboard-driven file explorer that lives entirely in your terminal. Browse directories, preview files with syntax highlighting, manage bookmarks, run shell commands, and see git status — all without leaving the terminal.",
     link: "https://github.com/radeqq007/duvet",
@@ -24,28 +24,30 @@ const projects = [
     link: "https://github.com/radeqq007/Sunbird",
     image: sunbird,
   },
- ];
+];
 
 const project = projects[0];
 ---
 
 <div
-  class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative flex flex-col gap-1 items-start"
+  class="card bg-bg-orange-light dark:bg-bg-orange-dark rounded-4xl lg:col-start-2 lg:col-span-2 row-span-2 p-6 relative"
 >
-  <img src={project.image.src} alt={project.title} id="image" class="max-h-40 lg:max-h-2/5 object-contain mx-auto" />
-  <a id="link" target="_blank" href={project.link}>
-    <h3 id="title" class="font-pacifico text-4xl">
-      {project.title}
-    </h2>
-  </a>
-  <p id="description" class="font-roboto-mono text-xl">{project.description}</p>
+  <div id="content" class="flex flex-col gap-1 items-start w-full h-full">
+    <img src={project.image.src} alt={project.title} id="image" class="max-h-40 lg:max-h-2/5 object-contain mx-auto" />
+    <a id="link" target="_blank" href={project.link}>
+      <h3 id="title" class="font-pacifico text-4xl">
+        {project.title}
+      </h2>
+    </a>
+    <p id="description" class="font-roboto-mono text-xl">{project.description}</p>
+  </div>
 
   <div class="flex justify-center gap-2 absolute bottom-2 left-0 right-0">
     {
       projects.map((_, i) => (
         <button
-          class="aspect-square w-5 rounded-full dark:bg-orange-accent-dark bg-orange-accent-light hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer dot"
-          data-index={i}
+        class="aspect-square w-5 rounded-full dark:bg-orange-accent-dark bg-orange-accent-light hover:scale-[1.2] transition-all duration-300 ease-in-out cursor-pointer dot"
+        data-index={i}
         ></button>
       ))
     }
@@ -58,18 +60,31 @@ const project = projects[0];
   const linkEl = document.getElementById("link");
   const imgEl = document.getElementById("image");
   const dots = document.querySelectorAll(".dot");
+  const content = document.getElementById("content");
+
+  let cur = 0;
 
   function updateProject(index) {
-    const project = projects[index];
+    if (index === cur) return;
 
-    if (!document.startViewTransition) {
-      updateContent(project);
-      return;
-    }
+    const tl = window.gsap.timeline();
+    
+    tl
+      .to(content, {
+        opacity: 0,
+        scale: 0.98,
+        duration: 0.2,
+        onComplete: () => {
+          updateContent(projects[index]);
+          cur = index;
+        },
+      })
+      .to(content, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.2,
+      });
 
-    document.startViewTransition(() => {
-      updateContent(project);
-    });
   }
 
   function updateContent(project) {
