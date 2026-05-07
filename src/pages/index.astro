@@ -8,7 +8,7 @@ import Project from "../components/Project.astro";
 ---
 
 <Layout>
-	<main class="lg:grid flex flex-col gap-4 lg:grid-cols-3 lg:grid-rows-5 md:w-9/10 2xl:w-2/3 m-auto h-[calc(100vh-4rem)] lg:gap-2 *:hover:scale-[1.008] *:transition-all md:[&:has(.card:hover)_.card:not(:hover)]:opacity-80">
+	<main class="will-change-transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:grid flex flex-col gap-4 lg:grid-cols-3 lg:grid-rows-5 w-9/10 xl:w-8/10 2xl:w-3/5 h-[calc(100vh-5rem)] lg:gap-2 *:hover:scale-[1.008] *:transition-all md:[&:has(.card:hover)_.card:not(:hover)]:opacity-90">
 		<Header/>
 		<About />
 		<Skills />
@@ -16,3 +16,30 @@ import Project from "../components/Project.astro";
 		<Project />
 	</main>
 </Layout>
+
+<script>
+import { gsap } from "gsap";
+
+	const main = document.querySelector("main");
+
+	let mouseX = 0;
+	let mouseY = 0;
+
+	let currentX = 0;
+	let currentY = 0;
+
+	window.addEventListener("mousemove", (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2) * 0.01;
+    mouseY = (e.clientY - window.innerHeight / 2) * 0.01;
+  });
+
+	gsap.ticker.add(() => {
+		currentX += (mouseX - currentX) * 0.08;
+		currentY += (mouseY - currentY) * 0.08;
+
+		gsap.set(main, {
+			x: currentX,
+			y: currentY,
+		});
+	});
+</script>
