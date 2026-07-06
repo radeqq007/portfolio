@@ -1,5 +1,5 @@
-import { cn } from "../../helpers";
-import type { Status } from "../../hooks/useDiscordStatus"
+import { cn } from "@/helpers";
+import type { Status } from "@/hooks/useDiscordStatus"
 
 type Props = {
   status: Status;

@@ -1,5 +1,5 @@
-import Badge from "../Badge"
-import Section from "../Section"
+import Badge from "@/components/Badge"
+import Section from "@/components/Section"
 
 const Footer = () => {
   return (

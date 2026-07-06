@@ -1,5 +1,5 @@
-import Section from '../Section'
-import StackGroup from '../StackGroup'
+import Section from '@/components/Section'
+import StackGroup from '@/components/StackGroup'
 
 const TechSection = () => {
   return (

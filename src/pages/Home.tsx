@@ -1,9 +1,9 @@
-import StatusSection from "../components/sections/Status"
-import ContactSection from "../components/sections/Contact"
-import Footer from "../components/sections/Footer"
-import ProjectsSection from "../components/sections/Projects"
-import TechSection from "../components/sections/Tech"
-import WelcomeSection from "../components/sections/Welcome"
+import StatusSection from "@/components/sections/Status"
+import ContactSection from "@/components/sections/Contact"
+import Footer from "@/components/sections/Footer"
+import ProjectsSection from "@/components/sections/Projects"
+import TechSection from "@/components/sections/Tech"
+import WelcomeSection from "@/components/sections/Welcome"
 
 const Home = () => {
   return (

@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react"
-import Section from "../Section"
-import MatrixRain from "../Matrix"
+import Section from "@/components/Section"
+import MatrixRain from "@/components/Matrix"
 import { Link } from "react-router"
 
 const ProjectsSection = () => {

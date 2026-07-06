@@ -1,4 +1,4 @@
-import Section from "../Section"
+import Section from "@/components/Section"
 
 const WelcomeSection = () => {
   return (

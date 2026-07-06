@@ -1,6 +1,6 @@
-import useDiscordStatus from "../../hooks/useDiscordStatus"
-import DiscordStatus from "../discord/Status"
-import Section from "../Section"
+import useDiscordStatus from "@/hooks/useDiscordStatus"
+import DiscordStatus from "@/components/discord/Status"
+import Section from "@/components/Section"
 
 const StatusSection = () => {
   const { isLoading, data, error } = useDiscordStatus('695965239556177980')
