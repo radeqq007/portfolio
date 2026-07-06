@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #171620;
+  --color-text: #C0BED5;
+  --color-text-secondary: #7a788f;
+  --color-accent: #2D2C38;
+  --color-highlight: #5312bc;
+  --color-cursor: #ffffff;
+  --font-anonymous: 'Anonymous Pro', monospace;
+}
+
+body {
+  @apply font-anonymous cursor-none
+}
+
+a {
+  @apply cursor-none
+}
