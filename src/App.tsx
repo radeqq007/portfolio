@@ -5,7 +5,7 @@ import Projects from '@/pages/Projects';
 
 function App() {
   return (
-    <div className="bg-bg h-screen w-screen py-20">
+    <div className="bg-bg h-screen w-screen">
       <Cursor />
       <Routes>
         <Route path="/" element={<Home />} />  

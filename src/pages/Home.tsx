@@ -7,7 +7,7 @@ import WelcomeSection from "@/components/sections/Welcome"
 
 const Home = () => {
   return (
-    <main className="grid grid-cols-[1fr_2fr_1fr] grid-rows-[3fr_2fr_2fr_1fr] gap-6 p-4 w-2/3 mx-auto h-full [&:has(section:hover)_section:not(:hover)]:opacity-76">
+    <main className="grid grid-cols-[1fr_2fr_1fr] grid-rows-[3fr_2fr_2fr_1fr] gap-6 p-4 w-2/3 mx-auto h-full [&:has(section:hover)_section:not(:hover)]:opacity-76 py-16">
       <WelcomeSection />
       <TechSection />
       <ContactSection />
