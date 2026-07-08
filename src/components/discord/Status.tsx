@@ -31,7 +31,7 @@ const DiscordStatus = ({ userID, avatar, globalName, status, song, artist, isLis
       break;
   }
   return (
-    <div className="flex gap-4 items-center px-4">
+    <div className="flex flex-col xs:flex-row lg:flex-col xl:flex-row gap-4 items-center sm:px-4">
         <img src={`https://cdn.discordapp.com/avatars/${userID}/${avatar}.png`} className="rounded-full aspect-square h-26" />
         <div className="text-text">
           <h3 className="text-xl">{globalName}</h3>

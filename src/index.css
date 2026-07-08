@@ -8,6 +8,8 @@
   --color-highlight: #5312bc;
   --color-cursor: #ffffff;
   --font-anonymous: 'Anonymous Pro', monospace;
+
+  --breakpoint-xs: 370px;
 }
 
 body {

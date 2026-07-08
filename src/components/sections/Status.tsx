@@ -6,8 +6,6 @@ const StatusSection = () => {
   const { isLoading, data, error } = useDiscordStatus('695965239556177980')
   console.log(data?.discord_status)
 
-  
-
   return (
     <Section title="Discord Status" className="row-start-2 col-start-2">
       {
@@ -24,8 +22,6 @@ const StatusSection = () => {
             isListening={data!.listening_to_spotify}
           />
       }
-      
-      
     </Section>
   )
 }
