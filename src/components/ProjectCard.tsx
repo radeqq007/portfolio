@@ -3,7 +3,7 @@ import Badge from "@/components/Badge"
 
 const ProjectCard = ({ title, imgSrc, description, links, badges }: Project) => {
   return (
-    <div className="border-1 border-accent w-[55vw] min-h-160 py-20 px-8 rounded-xl flex flex-col items-center gap-18 relative" data-cursor="expand">
+    <div className="border-1 border-accent w-full md:w-[55vw] min-h-160 py-20 px-8 rounded-xl flex flex-col items-center gap-18 relative" data-cursor="expand">
       <img src={imgSrc} alt={title} className="text-text-secondary w-full h-50 object-contain" />
 
       <div className="h-full">

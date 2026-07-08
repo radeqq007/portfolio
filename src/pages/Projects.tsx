@@ -49,10 +49,10 @@ const Projects = () => {
 
       <div
         ref={scrollRef}
-        className="flex flex-nowrap justify-start gap-20 p-20 w-max"
+        className="flex flex-nowrap justify-start gap-20 p-4 md:p-20 md:w-max flex-col md:flex-row"
       >
         {
-          projects.map(project => <ProjectCard title={project.title} description={project.description} imgSrc={project.imgSrc} links={project.links} badges={project.badges} />)
+          projects.map(project => <ProjectCard key={project.title} title={project.title} description={project.description} imgSrc={project.imgSrc} links={project.links} badges={project.badges} />)
         }
       </div>
     </main>
