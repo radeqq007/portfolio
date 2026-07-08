@@ -1,7 +1,7 @@
 import type { Project } from "@/types";
 import oBerry from "@/assets/oberry.svg"
 import sunbird from "@/assets/sunbird.svg"
-import duvet from "@/assets/duvet.svg"
+import duvet from "@/assets/duvet.png"
 
 export const projects: Project[] = [
   {
