@@ -4,24 +4,30 @@ import Section from "@/components/Section"
 
 const StatusSection = () => {
   const { isLoading, data, error } = useDiscordStatus('695965239556177980')
-  console.log(data?.discord_status)
+
+  let content;
+
+  if (isLoading) {
+    content = <span className="text-md text-text">Loading...</span>;
+  } else if (error || !data) {
+    content = <span className="text-md text-text">Error fetching discord status.</span>;
+  } else {
+    content = (
+      <DiscordStatus
+        status={data.discord_status}
+        userID={data.discord_user.id}
+        globalName={data.discord_user.global_name!}
+        avatar={data.discord_user.avatar}
+        song={data.spotify?.song}
+        artist={data.spotify?.artist}
+        isListening={data.listening_to_spotify}
+      />
+    );
+  }
 
   return (
     <Section title="Discord Status" className="row-start-2 col-start-2">
-      {
-        isLoading ?
-          <span className="text-md text-text">Loading...</span>
-        :
-          <DiscordStatus
-            status={data!.discord_status}
-            userID={data!.discord_user.id}
-            globalName={data!.discord_user.global_name!}
-            avatar={data!.discord_user.avatar}
-            song={data!.spotify?.song}
-            artist={data?.spotify?.artist}
-            isListening={data!.listening_to_spotify}
-          />
-      }
+      {content}
     </Section>
   )
 }
