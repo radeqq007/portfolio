@@ -47,19 +47,25 @@ const Cursor = () => {
   };
 
   useEffect(() => {
-    gsap.set(cursor.current, { xPercent: -50, yPercent: -50 })
-    window.addEventListener("mousemove", cursorFollower);
-    window.addEventListener("mouseover", onMouseEnter);
-    window.addEventListener("mouseout", onMouseLeave);
+    const mm = gsap.matchMedia();
 
-    return () => {
-      window.removeEventListener("mousemove", cursorFollower);
-      window.removeEventListener("mouseover", onMouseEnter);
-      window.removeEventListener("mouseout", onMouseLeave);
-    }
+    mm.add("(pointer: fine)", () => {
+      gsap.set(cursor.current, { xPercent: -50, yPercent: -50, display: "block" })
+      window.addEventListener("mousemove", cursorFollower);
+      window.addEventListener("mouseover", onMouseEnter);
+      window.addEventListener("mouseout", onMouseLeave);
+
+      return () => {
+        window.removeEventListener("mousemove", cursorFollower);
+        window.removeEventListener("mouseover", onMouseEnter);
+        window.removeEventListener("mouseout", onMouseLeave);
+      }
+    })
+
+    return () => { mm.revert() }
   }, [])
 
-  return <div ref={cursor} className="w-6 h-6 top-0 left-0 pointer-events-none bg-cursor fixed z-50 rounded-full mix-blend-difference"></div>
+  return <div ref={cursor} className="hidden w-6 h-6 top-0 left-0 pointer-events-none bg-cursor fixed z-50 rounded-full mix-blend-difference"></div>
 }
 
 export default Cursor
