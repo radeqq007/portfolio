@@ -1,5 +1,5 @@
 import useDiscordStatus from "@/hooks/useDiscordStatus"
-import DiscordStatus from "@/components/discord/Status"
+import DiscordStatus from "@/components/DiscordStatus"
 import Section from "@/components/Section"
 
 const StatusSection = () => {
