@@ -20,19 +20,19 @@ const ContactSection = () => {
 			<h2 className="text-text text-lg mt-4">Socials</h2>
 
 			<span className="flex flex-col gap-2">
-				<a data-cursor="shrink" href="#">
+				<a data-cursor="shrink" href="https://github.com/radeqq007" target="_blank">
 					<Badge
 						text="GitHub"
 						className="py-1 hover:bg-highlight hover:text-text"
 					/>
 				</a>
-				<a data-cursor="shrink" href="#">
+				<a data-cursor="shrink" href="https://www.instagram.com/your.iron.lung/" target="_blank">
 					<Badge
 						text="Instagram"
 						className="py-1 hover:bg-highlight hover:text-text"
 					/>
 				</a>
-				<a data-cursor="shrink" href="#">
+				<a data-cursor="shrink" href="https://x.com/wcale_nie_radek" target="_blank">
 					<Badge
 						text="X / Twitter"
 						className="py-1 hover:bg-highlight hover:text-text"
