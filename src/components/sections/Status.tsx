@@ -5,7 +5,7 @@ import useDiscordStatus from "@/hooks/useDiscordStatus";
 const StatusSection = () => {
 	const { isLoading, data, error } = useDiscordStatus("695965239556177980");
 
-	let content;
+	let content: React.ReactNode;
 
 	if (isLoading) {
 		content = <span className="text-md text-text">Loading...</span>;

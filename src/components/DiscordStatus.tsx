@@ -45,7 +45,7 @@ const DiscordStatus = ({
 	const activity = activities.find((act) => act.type !== 2 && act.type !== 4);
 	const customStatus = activities.find((act) => act.type === 4);
 
-	let activityContent;
+	let activityContent: React.ReactNode;
 
 	if (activity) {
 		activityContent = (
@@ -89,6 +89,7 @@ const DiscordStatus = ({
 			<img
 				src={`https://cdn.discordapp.com/avatars/${userID}/${avatar}.png`}
 				className="rounded-full aspect-square h-26"
+				alt="Discord Avatar"
 			/>
 			<div className="text-text">
 				<h3 className="text-xl">{globalName}</h3>

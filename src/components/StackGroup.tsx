@@ -11,7 +11,7 @@ const StackGroup = ({ title, elements }: Props) => {
 			<h3 className="text-text-secondary pl-1">{title}</h3>
 			<div className="flex flex-wrap gap-2 border-t-2 border-accent transition-colors duration-300 rounded-xl pt-2 px-2">
 				{elements.map((el) => (
-					<Badge text={el} />
+					<Badge text={el} key={el} />
 				))}
 			</div>
 		</div>

@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #171620;
-  --color-text: #C0BED5;
-  --color-text-secondary: #7a788f;
-  --color-accent: #2D2C38;
-  --color-highlight: #5312bc;
-  --color-cursor: #ffffff;
-  --font-anonymous: 'Anonymous Pro', monospace;
+	--color-bg: #171620;
+	--color-text: #c0bed5;
+	--color-text-secondary: #7a788f;
+	--color-accent: #2d2c38;
+	--color-highlight: #5312bc;
+	--color-cursor: #ffffff;
+	--font-anonymous: "Anonymous Pro", monospace;
 
-  --breakpoint-xs: 370px;
+	--breakpoint-xs: 370px;
 }
 
 body {
-	@apply font-anonymous cursor-none bg-bg
+	@apply font-anonymous cursor-none bg-bg;
 }
 
 a {
-	@apply cursor-none
+	@apply cursor-none;
 }

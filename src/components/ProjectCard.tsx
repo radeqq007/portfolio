@@ -23,17 +23,24 @@ const ProjectCard = ({
 				<h2 className="text-text text-4xl font-bold w-full">{title}</h2>
 				<span className="flex flex-wrap gap-1 mb-2">
 					{badges?.map((badge) => (
-						<img src={badge} alt={`${title} badge`} />
+						<img src={badge} alt={`${title} badge`} key={badge} />
 					))}
 				</span>
 				<p className="text-text-secondary text-xl">{description}</p>
 
 				<span className="absolute bottom-4 right-6 flex gap-2">
 					{Object.entries(links ?? {}).map(([text, href]) => (
-						<a href={href} target="_blank" data-cursor="shrink" rel="noopener">
+						<a
+							href={href}
+							key={text}
+							target="_blank"
+							data-cursor="shrink"
+							rel="noopener"
+						>
 							<Badge
 								text={text}
 								className="py-1 px-6 hover:bg-highlight hover:text-text"
+								key={text}
 							/>
 						</a>
 					))}

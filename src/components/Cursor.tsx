@@ -4,46 +4,45 @@ import { useEffect, useRef } from "react";
 const Cursor = () => {
 	const cursor = useRef<HTMLDivElement>(null);
 
-	const cursorFollower = (e: MouseEvent) => {
-		gsap.to(cursor.current, {
-			x: e.clientX,
-			y: e.clientY,
-			duration: 0.2,
-			ease: "power1.out",
-		});
-	};
-
-	const onMouseEnter = (e: MouseEvent) => {
-		const target = e.target as HTMLElement;
-		if (target.closest('[data-cursor="expand"]')) {
-			gsap.to(cursor.current, {
-				scale: 3,
-				duration: 0.3,
-				ease: "power2.out",
-			});
-		}
-
-		if (target.closest('[data-cursor="shrink"]')) {
-			gsap.to(cursor.current, {
-				scale: 0.8,
-				duration: 0.3,
-				ease: "power2.out",
-			});
-		}
-	};
-
-	const onMouseLeave = (e: MouseEvent) => {
-		const target = e.target as HTMLElement;
-		if (target.closest('[data-cursor="expand"]')) {
-			gsap.to(cursor.current, {
-				scale: 1,
-				duration: 0.3,
-				ease: "power2.out",
-			});
-		}
-	};
-
 	useEffect(() => {
+		const cursorFollower = (e: MouseEvent) => {
+			gsap.to(cursor.current, {
+				x: e.clientX,
+				y: e.clientY,
+				duration: 0.2,
+				ease: "power1.out",
+			});
+		};
+
+		const onMouseEnter = (e: MouseEvent) => {
+			const target = e.target as HTMLElement;
+			if (target.closest('[data-cursor="expand"]')) {
+				gsap.to(cursor.current, {
+					scale: 3,
+					duration: 0.3,
+					ease: "power2.out",
+				});
+			}
+
+			if (target.closest('[data-cursor="shrink"]')) {
+				gsap.to(cursor.current, {
+					scale: 0.8,
+					duration: 0.3,
+					ease: "power2.out",
+				});
+			}
+		};
+
+		const onMouseLeave = (e: MouseEvent) => {
+			const target = e.target as HTMLElement;
+			if (target.closest('[data-cursor="expand"]')) {
+				gsap.to(cursor.current, {
+					scale: 1,
+					duration: 0.3,
+					ease: "power2.out",
+				});
+			}
+		};
 		const mm = gsap.matchMedia();
 
 		mm.add("(pointer: fine)", () => {

@@ -124,7 +124,7 @@ export default function useDiscordStatus(
 
 		// const intervalId = setInterval(fetchStatus, 15000);
 		// return () => clearInterval(intervalId);
-	}, []);
+	}, [discordId]);
 
 	return { data, isLoading, error };
 }
