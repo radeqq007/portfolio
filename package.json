@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "oxlint",
+    "format": "biome check --write",
+		"lint": "biome check",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,11 +23,11 @@
     "tailwindcss": "^4.3.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.3",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
-    "oxlint": "^1.71.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
   }
