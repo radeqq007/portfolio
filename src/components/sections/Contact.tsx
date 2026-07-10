@@ -1,24 +1,46 @@
-import Badge from "@/components/Badge"
-import Section from "@/components/Section"
+import Badge from "@/components/Badge";
+import Section from "@/components/Section";
 
 const ContactSection = () => {
-  return (
-    <Section className="row-start-2 row-span-3">
-      <h1 className="text-text text-xl/6 font-bold">Let's start working together!</h1>
+	return (
+		<Section className="row-start-2 row-span-3">
+			<h1 className="text-text text-xl/6 font-bold">
+				Let's start working together!
+			</h1>
 
-      <h2 className="text-text text-lg mt-4">Contact Details</h2>
+			<h2 className="text-text text-lg mt-4">Contact Details</h2>
 
-      <a data-cursor="shrink" href="mailto:radoslaw.kaczmarczyk@proton.me"><Badge text="radoslaw.kaczmarczyk@proton.me" className="py-1 hover:bg-highlight hover:text-text" /></a>
+			<a data-cursor="shrink" href="mailto:radoslaw.kaczmarczyk@proton.me">
+				<Badge
+					text="radoslaw.kaczmarczyk@proton.me"
+					className="py-1 hover:bg-highlight hover:text-text"
+				/>
+			</a>
 
-      <h2 className="text-text text-lg mt-4">Socials</h2>
+			<h2 className="text-text text-lg mt-4">Socials</h2>
 
-      <span className="flex flex-col gap-2">
-        <a data-cursor="shrink" href="#"><Badge text="GitHub" className="py-1 hover:bg-highlight hover:text-text" /></a>
-        <a data-cursor="shrink" href="#"><Badge text="Instagram" className="py-1 hover:bg-highlight hover:text-text" /></a>
-        <a data-cursor="shrink" href="#"><Badge text="X / Twitter" className="py-1 hover:bg-highlight hover:text-text" /></a>
-      </span>
-    </Section>
-  )
-}
+			<span className="flex flex-col gap-2">
+				<a data-cursor="shrink" href="#">
+					<Badge
+						text="GitHub"
+						className="py-1 hover:bg-highlight hover:text-text"
+					/>
+				</a>
+				<a data-cursor="shrink" href="#">
+					<Badge
+						text="Instagram"
+						className="py-1 hover:bg-highlight hover:text-text"
+					/>
+				</a>
+				<a data-cursor="shrink" href="#">
+					<Badge
+						text="X / Twitter"
+						className="py-1 hover:bg-highlight hover:text-text"
+					/>
+				</a>
+			</span>
+		</Section>
+	);
+};
 
-export default ContactSection
+export default ContactSection;

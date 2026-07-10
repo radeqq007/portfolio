@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-bg: #171620;
@@ -13,9 +13,9 @@
 }
 
 body {
-  @apply font-anonymous cursor-none bg-bg
+	@apply font-anonymous cursor-none bg-bg
 }
 
 a {
-  @apply cursor-none
+	@apply cursor-none
 }
