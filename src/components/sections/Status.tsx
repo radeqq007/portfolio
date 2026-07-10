@@ -21,6 +21,7 @@ const StatusSection = () => {
         song={data.spotify?.song}
         artist={data.spotify?.artist}
         isListening={data.listening_to_spotify}
+        activities={data.activities}
       />
     );
   }

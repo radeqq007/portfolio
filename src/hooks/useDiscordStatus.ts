@@ -2,6 +2,53 @@ import { useState, useEffect } from 'react';
 
 export type Status = 'online' | 'idle' | 'dnd' | 'offline'
 
+export interface ActivityTimestamps {
+  start?: number;
+  end?: number;
+}
+
+export interface ActivityAssets {
+  large_image?: string;
+  large_text?: string;
+  small_image?: string;
+  small_text?: string;
+}
+
+export interface ActivityEmoji {
+  name: string;
+  id?: string;
+  animated?: boolean;
+}
+
+export interface ActivityParty {
+  id?: string;
+  size?: [number, number]; // [current_size, max_size]
+}
+
+export interface Activity {
+  id: string;
+  name: string;
+  /**
+   * 0: Playing
+   * 1: Streaming
+   * 2: Listening
+   * 3: Watching
+   * 4: Custom Status
+   * 5: Competing
+   */
+  type: 0 | 1 | 2 | 3 | 4 | 5;
+  state?: string;
+  details?: string;
+  timestamps?: ActivityTimestamps;
+  assets?: ActivityAssets;
+  emoji?: ActivityEmoji;
+  party?: ActivityParty;
+  application_id?: string;
+  session_id?: string;
+  buttons?: string[];
+  created_at: number;
+}
+
 export interface SpotifyData {
   track_id: string;
   timestamps: {
@@ -28,7 +75,7 @@ export interface LanyardData {
   listening_to_spotify: boolean;
   discord_user: DiscordUser;
   discord_status: Status;
-  activities: any[];
+  activities: Activity[];
   active_on_discord_web: boolean;
   active_on_discord_mobile: boolean;
   active_on_discord_desktop: boolean;
