@@ -66,7 +66,7 @@ const DiscordStatus = ({
 		);
 	} else if (isListening) {
 		activityContent = (
-			<span className="text-text-secondary text-sm">
+			<span className="text-text-secondary text-lg">
 				Listening to <span className="text-text font-medium">{song}</span> by{" "}
 				<span className="text-text font-medium">{artist}</span>
 			</span>
