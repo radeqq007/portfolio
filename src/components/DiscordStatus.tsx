@@ -49,7 +49,7 @@ const DiscordStatus = ({
 
 	if (activity) {
 		activityContent = (
-			<div className="text-text-secondary text-lg flex flex-col gap-0.5">
+			<div className="text-text-secondary text-lg flex flex-col gap-0.5 leading-tight">
 				<span className="text-text-secondary">
 					{activity.type === 1 && "Streaming "}
 					{activity.type === 3 && "Watching "}
@@ -59,9 +59,9 @@ const DiscordStatus = ({
 				</span>
 
 				{activity.details && (
-					<span className="text-sm">{activity.details}</span>
+					<span className="text-sm leading-tight">{activity.details}</span>
 				)}
-				{activity.state && <span className="text-sm">{activity.state}</span>}
+				{activity.state && <span className="text-sm leading-tight">{activity.state}</span>}
 			</div>
 		);
 	} else if (isListening) {
