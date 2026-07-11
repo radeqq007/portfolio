@@ -30,9 +30,11 @@ const MatrixRain = () => {
 		window.addEventListener("resize", setup);
 
 		const draw = () => {
+			ctx.globalCompositeOperation = "destination-out";
 			ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+			ctx.globalCompositeOperation = "source-over";
 			ctx.fillStyle = "#cfd0d4";
 			ctx.font = `${FONT_SIZE}px monospace`;
 
@@ -59,7 +61,7 @@ const MatrixRain = () => {
 	return (
 		<canvas
 			ref={canvasRef}
-			className="absolute inset-0 w-full h-full pointer-events-none opacity-20 mix-blend-screen"
+			className="absolute inset-0 w-full h-full pointer-events-none opacity-20"
 		/>
 	);
 };
