@@ -61,7 +61,9 @@ const DiscordStatus = ({
 				{activity.details && (
 					<span className="text-sm leading-tight">{activity.details}</span>
 				)}
-				{activity.state && <span className="text-sm leading-tight">{activity.state}</span>}
+				{activity.state && (
+					<span className="text-sm leading-tight">{activity.state}</span>
+				)}
 			</div>
 		);
 	} else if (isListening) {

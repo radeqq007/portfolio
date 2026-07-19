@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { ArrowLeft } from "lucide-react";
 import { useRef } from "react";
-import { Link } from "react-router";
+import LinkWithTransition from "@/components/LinkWithTransition";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/constants/projects";
 
@@ -50,14 +50,14 @@ const Projects = () => {
 
 	return (
 		<main ref={containerRef}>
-			<Link
+			<LinkWithTransition
 				to="/"
 				data-cursor="shrink"
 				className="group text-text px-20 py-5 flex gap-4 items-center"
 			>
 				<ArrowLeft className="group-hover:-translate-x-1 group-hover:text-highlight transition-all" />
 				<h1 className="text-3xl font-bold">Projects</h1>
-			</Link>
+			</LinkWithTransition>
 
 			<div
 				ref={scrollRef}

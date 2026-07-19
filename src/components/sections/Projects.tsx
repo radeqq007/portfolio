@@ -1,12 +1,12 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router";
 import MatrixRain from "@/components/Matrix";
 import Section from "@/components/Section";
+import LinkWithTransition from "../LinkWithTransition";
 
 const ProjectsSection = () => {
 	return (
 		<Section className="col-start-2 row-start-3 relative" title="Projects">
-			<Link
+			<LinkWithTransition
 				to="/projects"
 				className="text-text flex gap-1 items-center group/hyperlink *:transition-all absolute bottom-4 right-4"
 				data-cursor="shrink"
@@ -22,7 +22,7 @@ const ProjectsSection = () => {
 					size={22}
 					className="group-hover/hyperlink:translate-x-4 group-hover/hyperlink:opacity-0"
 				/>
-			</Link>
+			</LinkWithTransition>
 
 			<div className="group-hover:opacity-100 opacity-0 transition-all h-full w-full duration-400">
 				<MatrixRain />

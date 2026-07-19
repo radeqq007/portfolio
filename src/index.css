@@ -14,12 +14,12 @@
 
 body {
 	@apply font-anonymous cursor-none;
-  background-image: radial-gradient(
-    circle at center,
-    color-mix(var(--color-bg) 95%, white) 0.1rem,
-    var(--color-bg) 0
-  );
-  background-size: 2rem 2rem;
+	background-image: radial-gradient(
+		circle at center,
+		color-mix(var(--color-bg) 95%, white) 0.1rem,
+		var(--color-bg) 0
+	);
+	background-size: 2rem 2rem;
 }
 
 a {
