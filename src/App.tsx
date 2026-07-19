@@ -6,7 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 	return (
-		<div className="bg-bg min-h-screen min-w-screen md:h-screen">
+		<div className="min-h-screen min-w-screen md:h-screen">
 			<ScrollToTop />
 			<Cursor />
 			<Routes>
