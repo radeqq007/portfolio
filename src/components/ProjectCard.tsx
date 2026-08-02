@@ -10,7 +10,7 @@ const ProjectCard = ({
 }: Project) => {
 	return (
 		<div
-			className="border-1 border-accent w-full md:w-[55vw] min-h-160 py-20 px-8 rounded-xl flex flex-col items-center gap-18 relative"
+			className="border-1 border-accent bg-bg w-full md:w-[55vw] min-h-160 py-20 px-8 rounded-xl flex flex-col items-center gap-18 relative"
 			data-cursor="expand"
 		>
 			<img
