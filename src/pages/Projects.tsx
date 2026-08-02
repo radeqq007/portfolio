@@ -53,7 +53,7 @@ const Projects = () => {
 			<LinkWithTransition
 				to="/"
 				data-cursor="shrink"
-				className="group text-text px-20 py-5 flex gap-4 items-center"
+				className="group text-text px-20 py-5 flex gap-4 items-center w-min"
 			>
 				<ArrowLeft className="group-hover:-translate-x-1 group-hover:text-highlight transition-all" />
 				<h1 className="text-3xl font-bold">Projects</h1>
