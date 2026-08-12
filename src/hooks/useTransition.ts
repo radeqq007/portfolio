@@ -12,7 +12,7 @@ export const useTransition = () => {
 	const ctx = useContext(TransitionContext);
 
 	if (!ctx) {
-		throw new Error("useTransistion must be used inside TransistionProvider");
+		throw new Error("useTransition must be used inside TransitionProvider");
 	}
 
 	return ctx;
