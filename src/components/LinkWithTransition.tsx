@@ -13,7 +13,7 @@ const LinkWithTransition = ({ to, onClick, ...rest }: LinkProps) => {
 		});
 	};
 
-	return <Link to={to} {...rest} onClick={handleClick} {...rest} />;
+	return <Link to={to} {...rest} onClick={handleClick} />;
 };
 
 export default LinkWithTransition;
