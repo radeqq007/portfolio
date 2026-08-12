@@ -1,10 +1,10 @@
 import type { LinkProps } from "react-router";
 import { Link, useNavigate } from "react-router";
-import { useTransistion } from "@/hooks/useTransition";
+import { useTransition } from "@/hooks/useTransition";
 
 const LinkWithTransition = ({ to, onClick, ...rest }: LinkProps) => {
 	const navigate = useNavigate();
-	const { play } = useTransistion();
+	const { play } = useTransition();
 
 	const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();

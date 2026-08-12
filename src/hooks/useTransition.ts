@@ -8,7 +8,7 @@ export const TransitionContext = createContext<TransitionContextType | null>(
 	null,
 );
 
-export const useTransistion = () => {
+export const useTransition = () => {
 	const ctx = useContext(TransitionContext);
 
 	if (!ctx) {
