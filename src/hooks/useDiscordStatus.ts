@@ -122,7 +122,7 @@ export default function useDiscordStatus(
 
 		fetchStatus();
 
-		const intervalId = setInterval(fetchStatus, 1000);
+		const intervalId = setInterval(fetchStatus, 10000);
 		return () => clearInterval(intervalId);
 	}, [discordId]);
 
