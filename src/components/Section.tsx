@@ -15,7 +15,7 @@ const Section = ({ title, children, className }: Props) => {
 				className,
 			)}
 		>
-			{title && <h1 className="text-md text-text-secondary mb-2">{title}</h1>}
+			{title && <h2 className="text-md text-text-secondary mb-2">{title}</h2>}
 			{children}
 		</section>
 	);
