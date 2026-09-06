@@ -25,7 +25,7 @@ const TechSection = () => {
 				<StackGroup title="Backend" elements={["Go", "Python", "Lua"]} />
 				<StackGroup
 					title="Tools"
-					elements={["NeoVim", "Arch Linux", "Figma"]}
+					elements={["Neovim", "Linux", "Figma", "Git", "GitHub Actions"]}
 				/>
 			</div>
 		</Section>
