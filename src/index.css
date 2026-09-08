@@ -25,3 +25,30 @@ body {
 a {
 	@apply cursor-none;
 }
+
+.cool-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-accent) transparent;
+}
+
+.cool-scrollbar::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+.cool-scrollbar::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.cool-scrollbar::-webkit-scrollbar-thumb {
+	background-color: var(--color-accent);
+	border-radius: 9999px;
+}
+
+.cool-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-highlight);
+}
+
+.cool-scrollbar::-webkit-scrollbar-corner {
+	background: transparent;
+}

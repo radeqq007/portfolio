@@ -5,7 +5,7 @@ const TechSection = () => {
 	return (
 		<Section
 			title="Tech Stack & Tools"
-			className="col-span-1 row-span-3 col-start-3"
+			className="col-span-1 row-span-3 col-start-3 lg:overflow-y-auto cool-scrollbar"
 		>
 			<div className="flex flex-col gap-2 xl:gap-7">
 				<StackGroup
