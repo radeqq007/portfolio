@@ -19,7 +19,7 @@ const ContactSection = () => {
 
 			<h2 className="text-text text-lg mt-4">Socials</h2>
 
-			<span className="flex flex-col gap-2">
+			<span className="flex flex-col items-start gap-2">
 				<a
 					data-cursor="shrink"
 					href="https://github.com/radeqq007"
