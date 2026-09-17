@@ -20,6 +20,7 @@ body {
 		var(--color-bg) 0
 	);
 	background-size: 2rem 2rem;
+	overflow-x: hidden;
 }
 
 a {
