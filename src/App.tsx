@@ -3,6 +3,7 @@ import Cursor from "@/components/Cursor";
 import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
 import ScrollToTop from "./components/ScrollToTop";
+import Background from "./components/Background";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<Route path="/projects" element={<Projects />} />
 				<Route path="*" element={<Navigate to="/" replace />} />
 			</Routes>
+      <Background />
 		</div>
 	);
 }
