@@ -4,10 +4,13 @@ import { useTransition } from "@/hooks/useTransition";
 
 const LinkWithTransition = ({ to, onClick, ...rest }: LinkProps) => {
 	const navigate = useNavigate();
-	const { play } = useTransition();
+	const { play, isTransitioning } = useTransition();
 
 	const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
+		
+		if (isTransitioning) return;
+
 		play(() => {
 			navigate(to);
 		});

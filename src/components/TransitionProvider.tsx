@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import TransitionOverlay from "@/components/TransitionOverlay";
 import { TransitionContext } from "@/hooks/useTransition";
 
@@ -9,9 +9,12 @@ type Props = {
 
 export const TransitionProvider = ({ children }: Props) => {
 	const overlayRef = useRef<HTMLDivElement>(null);
+	const [isTransitioning, setIsTransitioning] = useState(false);
 
 	const play = (callback?: () => void) => {
 		if (!overlayRef.current) return;
+
+		setIsTransitioning(true);
 
 		const tl = gsap.timeline();
 		const duration = 2.4;
@@ -31,12 +34,13 @@ export const TransitionProvider = ({ children }: Props) => {
 				translateX: "100%",
 				onComplete: () => {
 					overlayRef.current!.style.transform = "translateX(-100%)";
+					setIsTransitioning(false);
 				},
 			});
 	};
 
 	return (
-		<TransitionContext.Provider value={{ play }}>
+		<TransitionContext.Provider value={{ play, isTransitioning }}>
 			{children}
 			<TransitionOverlay ref={overlayRef} />
 		</TransitionContext.Provider>

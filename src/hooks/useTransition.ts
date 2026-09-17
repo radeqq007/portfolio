@@ -2,6 +2,7 @@ import { createContext, useContext } from "react";
 
 type TransitionContextType = {
 	play: (callback?: () => void) => void;
+	isTransitioning: boolean;
 };
 
 export const TransitionContext = createContext<TransitionContextType | null>(
