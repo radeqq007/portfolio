@@ -19,16 +19,16 @@ const Cursor = () => {
 			if (target.closest('[data-cursor="expand"]')) {
 				gsap.to(cursor.current, {
 					scale: 3,
-					duration: 0.3,
-					ease: "power2.out",
+					duration: 0.4,
+					ease: "back.out",
 				});
 			}
 
 			if (target.closest('[data-cursor="shrink"]')) {
 				gsap.to(cursor.current, {
 					scale: 0.8,
-					duration: 0.3,
-					ease: "power2.out",
+					duration: 0.4,
+					ease: "back.out",
 				});
 			}
 		};
@@ -38,8 +38,8 @@ const Cursor = () => {
 			if (target.closest('[data-cursor="expand"]')) {
 				gsap.to(cursor.current, {
 					scale: 1,
-					duration: 0.3,
-					ease: "power2.out",
+					duration: 0.4,
+					ease: "back.out",
 				});
 			}
 		};
