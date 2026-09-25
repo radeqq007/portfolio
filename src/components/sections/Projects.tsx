@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import MatrixRain from "@/components/Matrix";
 import Section from "@/components/Section";
 import LinkWithTransition from "../LinkWithTransition";
 
@@ -23,10 +22,6 @@ const ProjectsSection = () => {
 					className="group-hover/hyperlink:translate-x-4 group-hover/hyperlink:opacity-0"
 				/>
 			</LinkWithTransition>
-
-			<div className="group-hover:opacity-100 opacity-0 transition-all h-full w-full duration-400">
-				<MatrixRain />
-			</div>
 		</Section>
 	);
 };
