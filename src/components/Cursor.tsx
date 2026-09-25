@@ -9,8 +9,8 @@ const Cursor = () => {
 	const isPressedDown = useRef<boolean>(false);
 
 	useEffect(() => {
-    let xTo = gsap.quickTo(cursor.current, "x", { duration: 0.2, ease: "power1.out" });
-    let yTo = gsap.quickTo(cursor.current, "y", { duration: 0.2, ease: "power1.out" });
+    let xTo = gsap.quickTo(cursor.current, "x", { duration: 0.15, ease: "power1.out" });
+    let yTo = gsap.quickTo(cursor.current, "y", { duration: 0.15, ease: "power1.out" });
 
 		const cursorFollower = (e: MouseEvent) => {
       xTo(e.pageX)
