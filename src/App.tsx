@@ -2,8 +2,8 @@ import { Navigate, Route, Routes } from "react-router";
 import Cursor from "@/components/Cursor";
 import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
-import ScrollToTop from "./components/ScrollToTop";
 import Background from "./components/Background";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 	return (
@@ -15,7 +15,7 @@ function App() {
 				<Route path="/projects" element={<Projects />} />
 				<Route path="*" element={<Navigate to="/" replace />} />
 			</Routes>
-      <Background />
+			<Background />
 		</div>
 	);
 }

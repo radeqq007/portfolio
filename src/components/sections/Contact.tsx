@@ -57,16 +57,16 @@ const ContactSection = () => {
 
 			<h2 className="text-text text-lg mt-4">CV</h2>
 
-      <a
-        data-cursor="shrink"
-        download
-        href="/portfolio/Radosław_Kaczmarczyk.pdf"
-      >
-        <Badge
-          text="Download CV"
-          className="py-1 hover:bg-highlight hover:text-text"
-        />
-      </a>
+			<a
+				data-cursor="shrink"
+				download
+				href="/portfolio/Radosław_Kaczmarczyk.pdf"
+			>
+				<Badge
+					text="Download CV"
+					className="py-1 hover:bg-highlight hover:text-text"
+				/>
+			</a>
 		</Section>
 	);
 };

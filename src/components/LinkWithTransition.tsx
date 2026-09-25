@@ -8,7 +8,7 @@ const LinkWithTransition = ({ to, onClick, ...rest }: LinkProps) => {
 
 	const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
-		
+
 		if (isTransitioning) return;
 
 		play(() => {

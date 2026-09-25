@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-const PRESSED_DOWN_SCALE_FACTOR = 0.8
+const PRESSED_DOWN_SCALE_FACTOR = 0.8;
 
 const Cursor = () => {
 	const cursor = useRef<HTMLDivElement>(null);
@@ -9,12 +9,18 @@ const Cursor = () => {
 	const isPressedDown = useRef<boolean>(false);
 
 	useEffect(() => {
-    let xTo = gsap.quickTo(cursor.current, "x", { duration: 0.15, ease: "power1.out" });
-    let yTo = gsap.quickTo(cursor.current, "y", { duration: 0.15, ease: "power1.out" });
+		const xTo = gsap.quickTo(cursor.current, "x", {
+			duration: 0.15,
+			ease: "power1.out",
+		});
+		const yTo = gsap.quickTo(cursor.current, "y", {
+			duration: 0.15,
+			ease: "power1.out",
+		});
 
 		const cursorFollower = (e: MouseEvent) => {
-      xTo(e.pageX)
-      yTo(e.pageY)
+			xTo(e.pageX);
+			yTo(e.pageY);
 		};
 
 		const onMouseEnter = (e: MouseEvent) => {
@@ -58,18 +64,17 @@ const Cursor = () => {
 			gsap.to(cursor.current, {
 				scale: curScale.current * PRESSED_DOWN_SCALE_FACTOR,
 				duration: 0.2,
-			})
-			isPressedDown.current = true
-		}
-
+			});
+			isPressedDown.current = true;
+		};
 
 		const onMouseUp = () => {
 			gsap.to(cursor.current, {
 				scale: curScale.current,
 				duration: 0.2,
-			})
-			isPressedDown.current = false
-		}
+			});
+			isPressedDown.current = false;
+		};
 
 		const mm = gsap.matchMedia();
 
