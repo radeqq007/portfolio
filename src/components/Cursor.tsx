@@ -30,6 +30,7 @@ const Cursor = () => {
 					scale: isPressedDown.current ? 3 * PRESSED_DOWN_SCALE_FACTOR : 3,
 					duration: 0.4,
 					ease: "back.out",
+					overwrite: "auto",
 				});
 				curScale.current = 3;
 			}
@@ -39,6 +40,7 @@ const Cursor = () => {
 					scale: isPressedDown.current ? 0.8 * PRESSED_DOWN_SCALE_FACTOR : 0.8,
 					duration: 0.4,
 					ease: "back.out",
+					overwrite: "auto",
 				});
 				curScale.current = 0.8;
 			}
@@ -54,6 +56,7 @@ const Cursor = () => {
 					scale: isPressedDown.current ? PRESSED_DOWN_SCALE_FACTOR : 1,
 					duration: 0.4,
 					ease: "back.out",
+					overwrite: "auto",
 				});
 
 				curScale.current = 1;
@@ -64,6 +67,7 @@ const Cursor = () => {
 			gsap.to(cursor.current, {
 				scale: curScale.current * PRESSED_DOWN_SCALE_FACTOR,
 				duration: 0.2,
+				overwrite: "auto",
 			});
 			isPressedDown.current = true;
 		};
@@ -72,6 +76,7 @@ const Cursor = () => {
 			gsap.to(cursor.current, {
 				scale: curScale.current,
 				duration: 0.2,
+				overwrite: "auto",
 			});
 			isPressedDown.current = false;
 		};
