@@ -19,8 +19,8 @@ const Cursor = () => {
 		});
 
 		const cursorFollower = (e: MouseEvent) => {
-			xTo(e.pageX);
-			yTo(e.pageY);
+			xTo(e.clientX);
+			yTo(e.clientY);
 		};
 
 		const onMouseEnter = (e: MouseEvent) => {
