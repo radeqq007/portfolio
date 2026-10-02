@@ -25,6 +25,18 @@ const Cursor = () => {
 
 		const onMouseEnter = (e: MouseEvent) => {
 			const target = e.target as HTMLElement;
+			if (!e.relatedTarget) {
+				xTo(e.clientX, e.clientX);
+				yTo(e.clientY, e.clientY);
+
+				gsap.to(cursor.current, {
+					opacity: 1,
+					duration: 0.2,
+					ease: 'power1.out',
+					overwrite: 'auto',
+				})
+			}
+
 			if (target.closest('[data-cursor="expand"]')) {
 				gsap.to(cursor.current, {
 					scale: isPressedDown.current ? 3 * PRESSED_DOWN_SCALE_FACTOR : 3,
@@ -48,6 +60,15 @@ const Cursor = () => {
 
 		const onMouseLeave = (e: MouseEvent) => {
 			const target = e.target as HTMLElement;
+			if (!e.relatedTarget) {
+				gsap.to(cursor.current, {
+					opacity: 0,
+					duration: 0.2,
+					ease: 'power1.out',
+					overwrite: "auto",
+				});
+			}
+
 			if (
 				target.closest('[data-cursor="expand"]') ||
 				target.closest('[data-cursor="shrink"]')
