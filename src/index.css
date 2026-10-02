@@ -48,3 +48,7 @@ a {
 		background: transparent;
 	}
 }
+
+html {
+	@apply cool-scrollbar
+}
