@@ -16,7 +16,7 @@ const BackgroundTexture = () => {
 
   return (
     <img
-      className="fixed -z-10 w-full opacity-50"
+      className="fixed -z-10 w-full opacity-50 pointer-events-none"
       src={texture}
       alt=""
       style={{
