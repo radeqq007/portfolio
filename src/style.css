@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-greenish: #D0FF00;
+  --color-blackish: #1E1E1E;
+  --color-dim-black: #2C2F2A;
+
+  --font-krona: "Krona One", sans-serif;
+  --font-josefin: "Josefin Sans", sans-serif;
+}
+
