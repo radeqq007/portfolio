@@ -9,3 +9,6 @@
   --font-josefin: "Josefin Sans", sans-serif;
 }
 
+.shadow-brutalist {
+  box-shadow: 8px 8px 0 black;
+}
