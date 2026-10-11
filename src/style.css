@@ -12,3 +12,7 @@
 .shadow-brutalist {
   box-shadow: 8px 8px 0 black;
 }
+
+html {
+  scroll-behavior: smooth;
+}

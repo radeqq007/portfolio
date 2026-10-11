@@ -1,5 +1,6 @@
 import BackgroundTexture from "./components/BackgroundTexture"
 import Navbar from "./components/Navbar"
+import ProjectsSection from "./components/ProjectsSection"
 import TopSection from "./components/TopSection"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Navbar/>
       <TopSection />
+      <ProjectsSection />
       <BackgroundTexture />
     </>
   )

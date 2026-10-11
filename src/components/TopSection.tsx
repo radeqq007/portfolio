@@ -9,9 +9,9 @@ const TopSection = () => {
       <About />
 
       <div className="absolute top-[90vh] flex gap-2 justify-center items-center">
-        <span className="font-krona bg-blackish text-white px-8 py-3 text-lg">
+        <a href="#projects" className="font-krona bg-blackish text-white px-8 py-3 text-lg">
           SCROLL DOWN
-        </span>
+        </a>
         <img src={ArrowDown} alt="Down Arrow" className="h-12" />
       </div>
     </div>
