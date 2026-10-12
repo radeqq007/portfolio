@@ -4,7 +4,7 @@ import instagramLogo from '@/assets/instagram.svg';
 
 const Navbar = () => {
   return (
-    <nav className="grid grid-cols-3 fixed left-0 top-0 right-0 px-8 py-2 bg-greenish">
+    <nav className="grid grid-cols-3 fixed left-0 top-0 right-0 px-8 py-1 bg-greenish z-100">
       <span className="flex items-center gap-3">
         <a href="https://x.com/wcale_nie_radek" target="_blank">  
           <img src={xLogo} className="h-7" />
