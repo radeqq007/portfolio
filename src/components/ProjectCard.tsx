@@ -1,53 +1,48 @@
-import Badge from "@/components/Badge";
-import type { Project } from "@/types";
+export interface ProjectBadge {
+  text: string;
+  href: string;
+}
 
-const ProjectCard = ({
-	title,
-	imgSrc,
-	description,
-	links,
-	badges,
-}: Project) => {
-	return (
-		<div
-			className="border-1 border-accent backdrop-blur-xs w-full md:w-[55vw] min-h-160 py-20 px-8 rounded-xl flex flex-col items-center gap-18 relative"
-			data-cursor="expand"
-		>
-			<img
-				src={imgSrc}
-				alt={title}
-				className="text-text-secondary w-full h-50 object-contain"
-			/>
+export interface ProjectCardProps {
+  content: string;
+  title: string;
+  badges: ProjectBadge[];
+  imgSrc: string;
+}
 
-			<div className="h-full">
-				<h2 className="text-text text-4xl font-bold w-full">{title}</h2>
-				<span className="flex flex-wrap gap-1 mb-2">
-					{badges?.map((badge) => (
-						<img src={badge} alt={`${title} badge`} key={badge} />
-					))}
-				</span>
-				<p className="text-text-secondary text-xl">{description}</p>
+const ProjectCard = ({ content, title, badges, imgSrc }: ProjectCardProps) => {
+  return (
+    <article data-project-card className="w-[min(85vw,44rem)] shrink-0">
+      <img
+        src={imgSrc}
+        alt={`${title} preview`}
+        draggable={false}
+        className="aspect-[9/5] w-full select-none bg-blackish object-contain"
+      />
 
-				<span className="absolute bottom-4 right-6 flex gap-2">
-					{Object.entries(links ?? {}).map(([text, href]) => (
-						<a
-							href={href}
-							key={text}
-							target="_blank"
-							data-cursor="shrink"
-							rel="noopener"
-						>
-							<Badge
-								text={text}
-								className="py-1 px-6 hover:bg-highlight hover:text-text"
-								key={text}
-							/>
-						</a>
-					))}
-				</span>
-			</div>
-		</div>
-	);
+      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <h3 className="font-josefin text-6xl font-bold leading-none text-greenish">
+          {title}
+        </h3>
+
+        {badges.map(({ text, href }) => (
+          <a
+            key={`${text}-${href}`}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-greenish px-3 py-1 font-krona text-xs uppercase tracking-wide text-blackish transition-colors hover:bg-white focus-visible:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenish"
+          >
+            {text}
+          </a>
+        ))}
+      </div>
+
+      <p className="mt-1 max-w-[34rem] font-krona text-md leading-relaxed text-white/90">
+        {content}
+      </p>
+    </article>
+  );
 };
 
 export default ProjectCard;

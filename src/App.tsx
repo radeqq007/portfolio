@@ -1,23 +1,40 @@
-import { Navigate, Route, Routes } from "react-router";
-import Cursor from "@/components/Cursor";
-import Home from "@/pages/Home";
-import Projects from "@/pages/Projects";
-import Background from "./components/Background";
-import ScrollToTop from "./components/ScrollToTop";
+import BackgroundTexture from "./components/BackgroundTexture"
+import Navbar from "./components/Navbar"
+import ProjectsSection from "./components/ProjectsSection"
+import TopSection from "./components/TopSection"
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import Lenis from 'lenis';
+import SkillsSection from "./components/SkillsSection";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function App() {
-	return (
-		<div className="min-h-screen min-w-screen md:h-screen">
-			<ScrollToTop />
-			<Cursor />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="*" element={<Navigate to="/" replace />} />
-			</Routes>
-			<Background />
-		</div>
-	);
+  useGSAP(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+  });
+
+  return (
+    <>
+      <Navbar/>
+      <TopSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <BackgroundTexture />
+    </>
+  )
 }
 
-export default App;
+export default App
