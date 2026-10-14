@@ -9,7 +9,7 @@ const SkillsCard = ({ category, list }: Props) => {
         {category}
       </h3>
 
-      <ul className="font-josefin w-full text-4xl bg-greenish text-dim-black font-semibold flex flex-col gap-1 pt-4 pl-6">
+      <ul className="font-josefin w-full text-3xl md:text-4xl bg-greenish text-dim-black font-semibold flex flex-col gap-1 pt-6 md:pt-4 pl-6">
         {
           list.map(skill => (
             <li key={skill}>{skill}</li>
