@@ -4,7 +4,7 @@ import ArrowDown from "@/assets/arrow-down.svg";
 
 const TopSection = () => {
   return (
-    <div className="flex md:flex-col justify-center h-screen">
+    <div className="flex md:flex-col justify-center h-screen" id="about">
       <VerticalName />
       <About />
 
