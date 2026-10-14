@@ -4,12 +4,12 @@ import ArrowDown from "@/assets/arrow-down.svg";
 
 const TopSection = () => {
   return (
-    <div className="flex flex-col justify-center h-screen">
+    <div className="flex md:flex-col justify-center h-screen">
       <VerticalName />
       <About />
 
       <div
-        className="absolute top-[90vh] flex gap-2 justify-center items-center"
+        className="hidden md:flex absolute top-[90vh] md:gap-2 justify-center items-center"
       >
         <a href="#projects" className="peer font-krona bg-blackish text-white px-8 py-3 text-lg hover:bg-greenish hover:text-blackish outline-2 outline-transparent hover:outline-blackish transition-colors">
           SCROLL DOWN
