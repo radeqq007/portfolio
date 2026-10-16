@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="md:ml-14 flex flex-col md:flex-row items-center gap-10 pt-10 md:pt-0 mx-10 md:mx-0">
+    <div className="md:ml-14 flex flex-col md:flex-row items-center gap-10 pt-13 md:pt-0 mx-10 md:mx-0">
       <img src="https://avatars.githubusercontent.com/radeqq007" className="h-60 shadow-brutalist"/>
 
       <div className="md:w-1/3">
