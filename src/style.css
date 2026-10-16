@@ -10,7 +10,7 @@
 }
 
 .shadow-brutalist {
-  box-shadow: 8px 8px 0 black;
+  box-shadow: 8px 8px 0 var(--color-blackish);
 }
 
 html {
