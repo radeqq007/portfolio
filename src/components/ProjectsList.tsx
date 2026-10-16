@@ -45,7 +45,7 @@ const ProjectsList = () => {
   return (
     <div
       ref={scrollerRef}
-      className="ml-28 flex h-full items-center overflow-x-auto [scrollbar-width:none] md:ml-44 md:overflow-hidden [&::-webkit-scrollbar]:hidden"
+      className="ml-28 flex h-full items-center overflow-x-auto md:[scrollbar-width:none] md:ml-44 md:overflow-hidden md:[&::-webkit-scrollbar]:hidden"
     >
       <ul ref={trackRef} className="flex w-max shrink-0 gap-16 ml-10 pr-24 will-change-transform">
         {projects.map((project) => (
